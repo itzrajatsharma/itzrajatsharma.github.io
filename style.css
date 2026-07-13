@@ -1,0 +1,712 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+.container{
+    height: 95vh;
+    width:96vw;
+    background-color: #050911;
+  
+   position: relative;
+   overflow: hidden;
+
+    
+
+}
+.nav{
+    width:95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap:30vw; */
+
+}
+.left{
+    background-color: #090e15;
+    backdrop-filter: blur(15px);
+
+    height: 100%;
+    width:25%;
+    position: absolute;
+    border-radius: .5rem;
+    border: 1px solid rgb(225, 55, 84);
+
+
+    
+}
+.lefthead img{
+    width:6rem;
+    border-radius: 60px;
+    max-width: 80%;
+    
+    
+}
+.lefthead{
+   
+    color: #d3d3d5;
+    display: flex;
+
+     align-items: center; 
+     justify-content: center;
+     font-size: clamp(5px,5vw,15px);
+     gap:3px;
+
+}
+.left ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2vh;
+    font-size: clamp(1px,5vw,20px);
+    margin-top:4vh ;
+    
+    
+}
+.left ul li{
+    display: flex;
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    width:80%;
+    /* background-color: aqua; */
+    border-radius: 5px;
+    flex-wrap: wrap;
+    border: 1px solid aqua;
+
+}
+.left ul li:hover{
+    background-color: #5121c7;
+    /* border: 1px solid white; */
+}
+.right{
+    height: 100%;
+    width:75%;
+    position: absolute;
+    right: 0;
+}
+.text{
+    margin-top: 3vh;
+}
+.text h2{
+    background: linear-gradient(135deg,rgb(44, 44, 231),aqua);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color:#d3d3d5;
+    font-size: clamp(5px,  5vw,25px);
+    margin-left: 4vw;
+}
+.text h3{
+    color: gray;
+    font-size: clamp(5px ,5vw,15px);
+    margin-left: 4vw;
+
+}
+.timewrap{
+    height:10vh;
+    width:100%;
+    /* background-color: aliceblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+
+.timebar{
+    height: 100%;
+    width:90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #090e15;
+    color: aliceblue;
+    font-size: clamp(5px,5vw,20px);
+    border-radius: 
+    4px;
+    
+}
+.timebox{
+    height:100%;
+    width:5vw;
+    /* background-color: aliceblue; */
+    color: aliceblue;
+    font-size: clamp(5px,5vw,20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.re{
+    width:25px;
+    fill: aqua;
+    max-width: 80%;
+   
+    
+}
+.timedisplay{
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    width:7vw;
+
+}
+.para{
+    height: 40vh;
+    width:89.5%;
+    background-color:#050a11;
+    margin-left: 3.7vw;
+    border-radius: 4px;
+    border: .5px solid rgb(75, 75, 243);
+    overflow-y: auto;
+    overflow-x: hidden;
+    backdrop-filter: blur(15px);
+}
+.para::-webkit-scrollbar{
+    display: none;
+}
+.foot{
+    height: 25vh;
+    width:89.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 3.7vw;
+        gap:1.9vw;
+        margin-top: 4vh;
+}
+.box{
+    height:25vh;
+    width:23%;
+    
+
+    background-color:#090d15;
+    backdrop-filter: blur(15px);
+    border: .5px solid grey;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+.oneicon{
+    width:53px;
+    max-width: 100%;
+    fill: aqua;
+
+    
+}
+.twologoicon{
+    width: 76px;
+    max-width:100%;
+    fill: aqua;
+}
+.threeicon{
+    width: 55px;
+  max-width: 100%;
+    fill: aqua;
+}
+.fouricon{
+    height: 40px;
+     max-width: 100%; 
+
+fill: aqua;}
+.para{
+    box-sizing: border-box;
+    padding: 2%;
+}
+.para span{
+    margin-left: 1%;
+    font-size: clamp(5px,5vw,26px);
+    color: grey;
+    
+}
+.para pre{
+     margin-left: 1%;
+    font-size: clamp(5px,5vw,23px);
+    
+
+}
+
+
+/* .active{
+    border-left: 4px solid #5121c7 ;
+} */
+ .active{
+    border-left:4px solid aqua;
+ }
+
+
+
+pre{
+    white-space: pre-wrap;
+}
+.onelogo{
+    width:30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+     justify-content: center; 
+
+}
+.onetext{
+    width: 60%;
+    height: 100%;
+    display: flex;
+     align-items: center; 
+     margin-right: 15%;
+     flex-wrap: wrap;
+  
+    
+     justify-content: center; 
+   
+    color: aliceblue;
+     flex-direction: column;
+     gap:1vh;
+}
+.onetext h3{
+    color: lightgray;
+    font-size: clamp(1px,5vw,20px);
+}
+.onetext h1{
+    color:aliceblue;
+    font-size: clamp(5px,5vw,23px);
+}
+.twotext{
+    width: 60%;
+    height: 100%;
+    display: flex;
+     align-items: center; 
+     flex-wrap: wrap;
+     
+
+    
+     justify-content: center; 
+    color: aliceblue;
+     flex-direction: column;
+     gap: 2vh;
+     margin-left: 1vw;
+
+}
+.twotext h3{
+    color: lightgray;
+    font-size: clamp(3px,5vw,20px);
+}
+.twotext h1{
+    color: aliceblue;
+    font-size: clamp(5px,5vw,23px);
+}
+.comptypeicon{
+        width:32px;
+    fill: aqua;
+    max-width: 20%;
+    /* position: absolute;
+    left: 0;
+    margin-left: 5vw; */
+    /* margin-right: .5vw; */
+
+}
+.comptyping{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.twologo{
+    width:30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.threelogo{
+     width:30%;
+    height: 100%;
+    display: flex;
+   
+     align-items: center; 
+    justify-content: center;
+
+}
+.threetext{
+      width: 60%;
+    height: 100%;
+    display: flex;
+    gap:2vh;
+    align-items: center; 
+    margin-right: 15%;
+    flex-wrap: wrap;
+    
+     justify-content: center; 
+    color: aliceblue;
+     flex-direction: column;
+     margin-left: 1vw;
+    
+    
+    
+
+    
+}
+.threetext h3{
+    color: lightgray;
+    font-size: clamp(1px,5vw,20px);
+}
+.threetext h1{
+    color: aliceblue;
+    font-size: clamp(5px,5vw,23px);
+}
+.fourlogo{
+ width:30%;
+    height: 100%;
+    display: flex;
+   
+    align-items: center;
+    justify-content: center;    
+}
+.fourtext{
+      width: 60%;
+    height: 100%;
+    display: flex;
+    gap:2vh;
+    flex-wrap: wrap;
+     align-items: center; 
+     margin-right: 20%;
+    
+     justify-content: center; 
+    color: aliceblue;
+     flex-direction: column;
+     margin-left: 1vw;
+
+}
+.fourtext h3{
+    color:lightgray;
+    font-size: clamp(1px,5vw,22px);
+}
+.fourtext h1{
+    color: aliceblue;
+    font-size: clamp(5px,5vw,24px);
+}
+.easyicon{
+    width:30px;
+    fill: aqua;
+    max-width: 20%;
+    position: absolute;
+    left: 0;
+    margin-left: 3vw;
+    margin-right: 1vw;
+   
+}
+.easy{
+    position: relative;
+    /* display: flex;
+     align-items: center; 
+     justify-content: center; 
+     gap:2vw; */
+    
+    
+}
+.intericon{
+    fill: aqua;
+    width: 30px;
+    max-width: 20%;
+    position: absolute;
+    max-width: 20%;
+    left: 0;
+    margin-left: 3vw;
+    margin-right: 1vw;
+}
+
+
+.intermediate{
+    position: relative;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1vw; */
+}
+.mastericon{
+    fill: aqua;
+    width: 37px;
+    max-width: 20%;
+    position: absolute;
+    left: 0;
+    margin-left: 3vw;
+    /* margin-right: 1vw; */
+
+}
+
+    
+
+.master{
+    position: relative;
+}
+.codeicon{
+    fill: aqua;
+    width:30px;
+    position: absolute;
+    left: 0;
+    margin-left: 3vw;
+    max-width: 20%;
+}
+.code{
+    position: relative;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    font-size: clamp(3px,5vw,20px);
+
+}
+.cybericon{
+    width:30px;
+     width:30px;
+    position: absolute;
+    left: 0;
+    margin-left: 3vw;
+    max-width: 20%;
+    fill: #00F5FF;
+}
+.cyber{
+    position: relative;
+     font-size: clamp(3px,5vw,20px);
+}
+@media (max-width:1243px ){
+    .intericon{
+       margin-left: 0;
+       margin-right: 2px;
+       
+    }
+    .timebox{
+        margin-left: 3px;
+    }
+    .codeicon{
+      
+         margin-left: 0;
+         margin-right: 3px;
+         
+    }
+    .easyicon{
+         margin-left: 0;
+       margin-right: 2px;
+
+    }
+    .mastericon{
+         margin-left: 0;
+       margin-right: 2px;
+
+    }
+    .cybericon{
+                 margin-left: 0;
+       margin-right: 2px;
+
+
+    }
+    
+}
+.cyberactive{
+    border-left:1px solid #00FF41;
+}
+.green{
+    border: 2px solid greenyellow;
+}
+.comp{
+    width:73% ;
+    height: 100%;
+    position: absolute;
+    right: 2px;
+}
+.head{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+
+    right: 2px;
+    width: 100%;
+    height: 20%;
+
+}
+.head h1{
+    background: linear-gradient(90deg, blue, violet, red);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+font-size: clamp(2px,5vw,40px);
+
+}
+.head h4{
+    color: white;
+    font-size: clamp(2px,5vw,20px);
+}
+.head h5{
+    color: gray;
+    font-size:clamp(2px,5vw,18px) ;
+}
+.inputcomp{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+
+   
+   
+  
+
+   height: 10vh;
+   width: 95%;
+    margin-top: 1px;
+
+}
+ .typeinput{
+    width:35%;
+    height: 60%;
+background:linear-gradient(135deg,blue,red);
+border: 1px solid rgba(255, 255, 255, 0.15);
+backdrop-filter: blur(18px);
+border-radius: 40px;
+color: aliceblue;
+
+ text-align: center;
+ border-color: aqua;
+
+
+
+
+}
+option{
+    background-color: #090d15;
+    color: aliceblue;
+    font-size: clamp(2px 5vw,15px);
+
+}
+::placeholder{
+       color: aliceblue;
+      
+      
+}
+.footer{
+    width: 95%;
+    height: 67%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+   
+}
+.paracomp{
+    width: 80%;
+    height: 60%;
+   border: 1px solid rgb(75, 75, 243);
+   color: gray;
+   font-size: clamp(2px,5vw,20px);
+   box-sizing: border-box;
+   padding:8px ;
+   overflow-y: auto;
+   overflow-x: hidden;
+
+}
+.paracomp::-webkit-scrollbar{
+    display: none;
+}
+.paracomp span{
+    margin-left: 5px;
+}
+.end{
+    width: 100%;
+    height:40% ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.wpmicon{
+    max-width:20% ;
+    fill: #00F5FF;
+}
+.accuracyicon{
+    width: 20%;
+   
+    fill: #00F5FF;
+}
+.wpmboxcomp{
+    width:30%;
+height:80%;
+border: 1px solid lightseagreen;
+display: flex;
+border-radius:6px ;
+}
+.accuracybox{
+      width:30%;
+height:80%;
+border: 1px solid lightseagreen;
+display: flex;
+border-radius:6px ;
+
+}
+.textcomp{
+     width: 60%;
+    height: 100%;
+    display: flex;
+    gap:2vh;
+    align-items: center; 
+    margin-right: 15%;
+    flex-wrap: wrap;
+    
+     justify-content: center; 
+    color: aliceblue;
+     flex-direction: column;
+     margin-left: 1vw;
+}
+.clockiconcomp{
+    fill: #00F5FF;
+    width: 30px;
+}
+.timeclock{
+    width:10%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.clockdisplay{
+    height: 100%;
+    width: 70%;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:clamp(2px,5vw,20px) ;
+
+}
+.compnext{
+    width:25px;
+    fill: aqua;
+    max-width: 80%;
+
+}
+.lighticon{
+    fill: #00F5FF;
+    width:35px;
+
+}
+.lighton{
+      fill: #00F5FF;
+    width:35px;
+
+}
