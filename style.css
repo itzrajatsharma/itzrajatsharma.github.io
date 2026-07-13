@@ -88,6 +88,7 @@ body{
 .left ul li:hover{
     background-color: #5121c7;
     /* border: 1px solid white; */
+    transform: scale(1.1);
 }
 .right{
     height: 100%;
@@ -708,5 +709,51 @@ border-radius:6px ;
 .lighton{
       fill: #00F5FF;
     width:35px;
+
+}
+.left .sections{
+    position: absolute;
+   
+    height: 45px;
+    bottom: 11%;
+    width: 98%;
+    margin-left: 1px;
+    
+   
+    
+    
+}
+
+.left .sections ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    border: none;
+
+}
+.left .sections ul li:hover{
+    border-color: aqua;
+    background-color: #050911;
+   
+
+}
+.left .sections ul li{
+    border: none;
+    border: 3px solid;
+border-image: linear-gradient(45deg, #00ff88, #00ffff, #0066ff) 1;
+border-radius: 4px;
+}
+.left .sections ul li a{
+    color: aliceblue;
+     font-size: clamp(2px,5vw,15px);
+     text-decoration: none;
+    
+   
+    
 
 }
