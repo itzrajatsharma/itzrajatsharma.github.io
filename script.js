@@ -26,28 +26,166 @@ let wpmboxcomp=document.querySelector(".wpmboxcomp");
 let compint=0;
 let left=document.querySelector(".left");
 let light=document.querySelector(".light");
+let re=document.querySelectorAll(".re");
+let threelogo=document.querySelector(".logothree");
 let timer;
 let  accuracycount = 0;
 let lightonn=document.querySelector(".lightonn");
+let nav=document.querySelector(".nav");
+let text=document.querySelector(".text");
+let foot=document.querySelector(".foot");
 let currentindex = 0;
+let count;
+let span;
+  let lightcount=0;
+light.addEventListener("click",()=>{
+    // (lightcount/2==0)
+      container.style.backgroundImage="none";
+      left.style.border="";
+      light.style.display="none";
+      lightonn.style.display="";
+      console.log("lightif");
+      lightcount++;
+   
+    }
+    
+    
+
+)
+let r=0;
+
+let pargraph = ["The quick brown fox jumps over the lazy dog. This sentence contains every letter of the alphabet and is commonly used for typing practice. Regular practice helps improve typing speed and accuracy.",
+    "Learning to type efficiently is a valuable skill in today's digital world. Consistent practice, proper finger placement, and maintaining accuracy can significantly increase your typing speed.",
+    "Technology has transformed the way we communicate, work, and learn. Developing strong typing skills allows people to express their ideas quickly and efficiently."
+]
    let  time=0;
    let  timestart=false;
    let c=0;
 if(window.innerWidth <= 768){
-    document.body.innerHTML = `
-        <div style="
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            background:black;
-            color:white;
-            font-size:24px;
-            text-align:center;
-        ">
-            🚫 Please open this typing website on a desktop or laptop for the best experience.
-        </div>
-    `;
+    left.style.display="none";
+    right.style.width="90vw";
+    re[0].style.display="none";
+    nav.style.display="flex";
+    text.style.display="flex";
+    nav.style.justifyContent="center";
+    
+    nav.style.alignItems="center";
+    text.style.justifyContent="center";
+    text.style.alignItems="center";
+    para.style.height="40%";
+     
+   
+    nav.innerHTML=` <div class="nav">
+     <img src="mylogo.png" width="100px">
+                <div class="text" ">
+                
+               
+                    <h2>TypeWeb</h2>
+                    <h3>Test your typing speed and accuracy</h3>
+
+
+                </div>
+             
+
+                <div class="light"style="display:none" >
+                    <?xml version="1.0" encoding="utf-8"?><svg class="lighticon" version="1.1" id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        width="122.882px" height="73.393px" viewBox="0 0 122.882 73.393"
+                        enable-background="new 0 0 122.882 73.393" xml:space="preserve">
+                        <g>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M87.189,0H35.694C16.063,0,0,16.513,0,36.697l0,0 c0,20.182,16.063,36.695,35.694,36.695h51.496c19.632,0,35.692-16.514,35.692-36.695l0,0C122.882,16.513,106.821,0,87.189,0 L87.189,0z M59.367,6.057c1.739,1.233,3.36,2.61,4.846,4.098l0.022,0.022l0.073,0.07c0.927,0.932,1.803,1.921,2.621,2.939 c0.839,1.041,1.631,2.141,2.363,3.284c3.71,5.79,5.882,12.679,5.925,20.065c0.012,0.068,0.014,0.141,0.014,0.213v0.006l0,0v0.08 l-0.002,0.039v0.021l-0.012,0.061c-0.026,5.129-1.081,10.014-2.961,14.455c-0.307,0.725-0.642,1.449-0.998,2.16 c-1.823,3.643-4.213,6.947-7.046,9.777l-0.021,0.02c-0.311,0.311-0.671,0.652-1.05,1.008c-0.352,0.326-0.724,0.652-1.093,0.971 c-0.816,0.697-1.665,1.357-2.544,1.986h25.974l0.18-0.008h0.005h0.095l0.032,0.002h0.029l0.029,0.006 c3.996-0.021,7.828-0.881,11.318-2.408c0.569-0.25,1.141-0.521,1.7-0.813c2.862-1.479,5.473-3.432,7.72-5.742l0.012-0.012 l-0.003-0.004l0.023-0.023l0.052-0.049c0.734-0.758,1.434-1.557,2.08-2.389l0.002-0.002l-0.002-0.002 c0.673-0.857,1.308-1.758,1.882-2.678c2.962-4.74,4.699-10.365,4.722-16.381l-0.01-0.129v-0.004v-0.008l0.005-0.033v-0.021 l0.002-0.045v-0.016l0.007-0.045c-0.016-3.316-0.558-6.522-1.537-9.527c-0.247-0.757-0.517-1.495-0.806-2.191 c-1.512-3.676-3.714-6.998-6.427-9.785l-0.018-0.025l-0.003,0.002l-0.011-0.012h-0.003l-0.02-0.021l-0.01-0.016 c-0.728-0.746-1.515-1.465-2.338-2.146c-0.827-0.687-1.696-1.333-2.594-1.927C97.021,7.86,91.592,6.089,85.8,6.062l-0.139,0.007 h-0.002l-0.027-0.004h-0.029h-0.029h-0.032l-0.027-0.007H59.367L59.367,6.057z M36.696,7.864 c-16.183,0-29.308,13.124-29.308,29.308c0,16.186,13.125,29.311,29.308,29.311c16.185,0,29.311-13.125,29.311-29.311 C66.007,20.988,52.881,7.864,36.696,7.864L36.696,7.864z" />
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="lightonn" style="display:none" >
+                    <?xml version="1.0" encoding="utf-8"?><svg class="lighton" version="1.1" id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        width="122.879px" height="72.555px" viewBox="0 0 122.879 72.555"
+                        enable-background="new 0 0 122.879 72.555" xml:space="preserve">
+                        <g>
+                            <path
+                                d="M85.953,5.357h0.65c8.5,0,16.229,3.479,21.834,9.084s9.084,13.335,9.084,21.835c0,0.133,0,0.266-0.002,0.396 c-0.002,0.133-0.004,0.266-0.008,0.398c-0.004,0.131-0.008,0.264-0.012,0.395l0,0c-0.006,0.131-0.012,0.264-0.018,0.395l0,0 c-0.008,0.131-0.016,0.262-0.023,0.393l0,0c-0.008,0.131-0.018,0.262-0.027,0.393l0,0c-0.01,0.129-0.021,0.26-0.033,0.389v0.002 c-0.035,0.389-0.076,0.777-0.125,1.162l0,0c-0.891,6.939-4.107,13.18-8.838,17.91c-4.992,4.992-11.672,8.301-19.074,8.963l0,0 c-0.129,0.012-0.26,0.023-0.389,0.033h-0.002c-0.129,0.01-0.26,0.02-0.391,0.027l0,0c-0.131,0.01-0.262,0.016-0.393,0.023h-0.002 c-0.129,0.006-0.262,0.012-0.393,0.018l0,0c-0.133,0.006-0.264,0.01-0.395,0.012h-0.002c-0.131,0.004-0.264,0.006-0.396,0.008l0,0 c-0.131,0.002-0.264,0.004-0.396,0.004h-0.65c-8.496,0-16.227-3.482-21.834-9.088c-5.605-5.605-9.086-13.334-9.086-21.832 c0-8.5,3.479-16.23,9.084-21.835C69.723,8.836,77.451,5.357,85.953,5.357L85.953,5.357z M86.604,0h-0.65H36.277 c-9.979,0-19.049,4.081-25.623,10.654C4.08,17.228,0,26.298,0,36.277c0,9.979,4.081,19.047,10.655,25.621 c6.574,6.574,15.645,10.656,25.622,10.656h49.676h0.65c0.156,0,0.311-0.002,0.467-0.004l0,0c0.154-0.002,0.311-0.004,0.465-0.008 l0,0c0.154-0.006,0.311-0.01,0.465-0.016l0,0c0.154-0.006,0.309-0.014,0.463-0.021l0,0c0.154-0.008,0.307-0.016,0.461-0.025l0,0 c0.154-0.01,0.307-0.021,0.459-0.033l0,0c0.154-0.012,0.307-0.023,0.459-0.037l0,0c8.693-0.779,16.527-4.656,22.383-10.512 c5.443-5.443,9.178-12.6,10.301-20.564v-0.002c0.043-0.299,0.082-0.602,0.117-0.904l0,0c0.035-0.303,0.066-0.605,0.092-0.912l0,0 c0.014-0.152,0.027-0.305,0.039-0.457l0,0c0.012-0.154,0.023-0.307,0.033-0.461l0,0c0.01-0.152,0.018-0.307,0.025-0.461l0,0 c0.008-0.154,0.016-0.309,0.021-0.463l0,0c0.006-0.154,0.01-0.309,0.014-0.465l0,0c0.004-0.154,0.008-0.309,0.01-0.465 s0.002-0.311,0.002-0.467c0-9.979-4.08-19.049-10.654-25.624C105.652,4.081,96.582,0,86.604,0L86.604,0z" />
+                        </g>
+                    </svg>
+                </div>`
+               pargraph  = [
+  "Learning to type efficiently requires consistent practice and patience. Many beginners focus entirely on speed, but experienced typists understand that accuracy is equally important. Developing proper finger placement and maintaining good posture can significantly improve both comfort and performance during long typing sessions. Over time, repeated practice builds muscle memory and allows users to type naturally without looking at the keyboard.",
+
+  "Technology has transformed the way people communicate, learn, and conduct business. Computers, smartphones, and internet services have become essential tools in everyday life. As digital communication continues to expand, strong typing skills provide a significant advantage for students, professionals, and anyone who regularly works with technology.",
+
+  "Building strong typing habits requires dedication and a willingness to practice regularly. Many learners become discouraged when they fail to see immediate improvements, but consistent effort often produces remarkable progress over time. Practicing for even twenty minutes each day can substantially increase typing speed and accuracy.",
+
+  "The internet has revolutionized access to information and education. Students can now access online courses, research materials, and educational videos from virtually anywhere in the world. This accessibility has created new opportunities for learning and professional development across multiple disciplines.",
+
+  "Developing keyboard proficiency involves more than memorizing key positions. Successful typists learn to coordinate finger movements efficiently while maintaining concentration and minimizing unnecessary hand movements. This combination of skill and practice allows individuals to achieve impressive typing speeds.",
+
+  "Modern workplaces depend heavily on digital communication and documentation. Employees frequently spend several hours each day writing emails, preparing reports, analyzing data, and collaborating through online platforms. Efficient typing skills can significantly improve workplace productivity.",
+
+  "Maintaining proper posture while typing is essential for preventing discomfort and repetitive strain injuries. Keeping the back straight, shoulders relaxed, and wrists in a neutral position helps reduce physical stress and allows for longer, more comfortable practice sessions.",
+
+  "The development of computer technology has dramatically changed how businesses operate. Organizations now rely on digital systems for communication, accounting, project management, customer service, and data analysis. Employees with strong technical and typing skills often adapt more easily to these environments.",
+
+  "Regular practice sessions are generally more effective than occasional lengthy sessions. Short periods of focused practice help reinforce muscle memory and improve concentration while reducing fatigue and frustration during the learning process.",
+
+  "Students who develop strong typing skills often complete assignments more efficiently and experience greater confidence when working with computers. These skills become increasingly valuable as academic and professional environments continue to adopt digital technologies.",
+
+  "The process of learning touch typing involves training the fingers to locate keys automatically without visual assistance. Although this approach initially feels difficult, consistent practice eventually allows typists to maintain both speed and accuracy simultaneously.",
+
+  "Communication technologies have evolved rapidly over the past several decades. Electronic mail, instant messaging, video conferencing, and social media platforms have fundamentally transformed the way individuals interact and exchange information.",
+
+  "Improving typing speed requires balancing multiple factors, including accuracy, concentration, finger coordination, and familiarity with the keyboard layout. Neglecting any one of these areas can limit overall performance and slow progress.",
+
+  "Software applications continue to play an increasingly important role in education, healthcare, finance, and entertainment. Professionals across these industries rely heavily on computers and benefit greatly from efficient keyboard skills.",
+
+  "Typing exercises that include punctuation, numbers, and special symbols help learners develop a broader range of keyboard skills. These exercises also prepare individuals for real-world typing tasks encountered in academic and professional settings.",
+
+  "The ability to type accurately under time pressure is an important skill for many careers. Journalists, programmers, researchers, and administrative professionals frequently rely on fast and precise typing to complete their responsibilities effectively.",
+
+  "Consistent practice not only improves typing speed but also increases confidence and reduces mental effort. Experienced typists often focus entirely on their thoughts rather than on the physical act of pressing keys.",
+
+  "Digital literacy has become an essential component of modern education. Students are increasingly expected to use computers for research, communication, collaboration, and the completion of academic assignments.",
+
+  "Many successful learners establish structured practice routines that include warm-up exercises, accuracy drills, and timed typing tests. This systematic approach helps track progress and maintain motivation over extended periods.",
+
+  "The continued advancement of technology ensures that keyboard skills will remain valuable for many years. Regardless of future innovations, the ability to communicate efficiently through digital devices is likely to remain an important professional and personal asset."
+];
+currentindex = 0;      // reset typing position
+    accuracycount = 0;     // reset errors
+    time = 0;              // reset timer
+    timestart = false;
+    clearInterval(timer);
+display();
+foot.style.display="flex";
+foot.style.justifyContent="space-evenly";
+// foot.style.alignItems="space-evenly";
+foot.style.flexWrap="wrap";
+foot.style.alignItems="center";
+foot.style.width="90%";
+foot.style.height="20vh";
+
+// foot.style.flexDirection="column";
+foot.style.margin="2vh";
+threelogo.style.width="33%";
+container.style.overflow="auto";
+
+
+
+
+box.forEach(box=>{
+box.style.width="40%";
+box.style.height="90%";
+
+box.style.fontSize="8px";
+
+
+
+})
+               
+    
+
+   
 }
 
 
@@ -55,26 +193,8 @@ if(window.innerWidth <= 768){
 
 
 
-let pargraph = ["The quick brown fox jumps over the lazy dog. This sentence contains every letter of the alphabet and is commonly used for typing practice. Regular practice helps improve typing speed and accuracy.",
-    "Learning to type efficiently is a valuable skill in today's digital world. Consistent practice, proper finger placement, and maintaining accuracy can significantly increase your typing speed.",
-    "Technology has transformed the way we communicate, work, and learn. Developing strong typing skills allows people to express their ideas quickly and efficiently."
-]
-let count;
-let span;
-  let lightcount=0;
-light.addEventListener("click",()=>{
-    (lightcount/2==0)
-      container.style.backgroundImage="none";
-      left.style.border="";
-      light.style.display="none";
-      lightonn.style.display="block";
-      console.log("lightif");
-      lightcount++;
-    }
-    
-    
 
-)
+
 
 easy.addEventListener("click",()=>{
   
@@ -312,7 +432,7 @@ right.style.backgroundRepeat = "no-repeat";
 })
 
 
-let r=0;
+
 function codedisplay(){
      count = 0;
      
