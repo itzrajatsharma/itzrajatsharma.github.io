@@ -34,6 +34,8 @@ let lightonn=document.querySelector(".lightonn");
 let nav=document.querySelector(".nav");
 let text=document.querySelector(".text");
 let foot=document.querySelector(".foot");
+let inputmobile=document.querySelector("#typingInput");
+
 let currentindex = 0;
 let count;
 let span;
@@ -182,6 +184,17 @@ box.style.fontSize="8px";
 
 
 })
+para.addEventListener("click",()=>{
+
+    inputmobile.focus();
+
+});
+
+para.addEventListener("touchstart",()=>{
+
+    inputmobile.focus();
+
+});
                
     
 
