@@ -195,29 +195,29 @@ para.addEventListener("touchstart",()=>{
     inputmobile.focus();
 
 });
-inputmobile.addEventListener("input", () => {
-    let value = inputmobile.value;
+// inputmobile.addEventListener("input", () => {
+//     let value = inputmobile.value;
 
-    for (let i = 0; i < span.length; i++) {
+//     for (let i = 0; i < span.length; i++) {
 
-        span[i].classList.remove("active");
+//         span[i].classList.remove("active");
 
-        if (i < value.length) {
+//         if (i < value.length) {
 
-            if (value[i] === span[i].textContent) {
-                span[i].style.color = "white";
-            } else {
-                span[i].style.color = "red";
-            }
+//             if (value[i] === span[i].textContent) {
+//                 span[i].style.color = "white";
+//             } else {
+//                 span[i].style.color = "red";
+//             }
 
-        }
+//         }
 
-    }
+//     }
 
-    if (value.length < span.length) {
-        span[value.length].classList.add("active");
-    }
-});
+//     if (value.length < span.length) {
+//         span[value.length].classList.add("active");
+//     }
+// });
                
     
 
@@ -760,152 +760,399 @@ console.log(count);
 let wpmcountcomp=0;
 
 
-function typing() {
+// function typing() {
    
 
     
-    document.addEventListener("keydown", (e) => {
+//     document.addEventListener("keydown", (e) => {
       
       
 
-        if (!timestart) {
-            timer = setInterval(() => {
-                let timebox = document.querySelector(".timebox").innerHTML = time + "sec";
-                if(compint==1){
-                 let clockdisplay = document.querySelector(".clockdisplay").innerHTML = time + "sec";
-                }
-                time++;
-                      if(time===60 && compint==1){
-            clearInterval(timer);
-                console.log("aa gaya");
-              let  accucomp=Math.floor(((wpmcountcomp-accuracycount)/wpmcountcomp)*100);
-                   accuracyboxcomp.style.display="";
-    wpmboxcomp.style.display="";
-        wpmbox.innerHTML= `<h3>WPM<h3><h1>${Math.floor(wpmcountcomp/5)}</h1>`;
-           accuracybox.innerHTML= `<h3>Accuracy</h3><h1>${accucomp}%</h1>`;
-            if(Number(inputcom.value) > wpmcountcomp){
-                alert("your time is expired, you do not reach your target try again ");
+//         if (!timestart) {
+//             timer = setInterval(() => {
+//                 let timebox = document.querySelector(".timebox").innerHTML = time + "sec";
+//                 if(compint==1){
+//                  let clockdisplay = document.querySelector(".clockdisplay").innerHTML = time + "sec";
+//                 }
+//                 time++;
+//                       if(time===60 && compint==1){
+//             clearInterval(timer);
+//                 console.log("aa gaya");
+//               let  accucomp=Math.floor(((wpmcountcomp-accuracycount)/wpmcountcomp)*100);
+//                    accuracyboxcomp.style.display="";
+//     wpmboxcomp.style.display="";
+//         wpmbox.innerHTML= `<h3>WPM<h3><h1>${Math.floor(wpmcountcomp/5)}</h1>`;
+//            accuracybox.innerHTML= `<h3>Accuracy</h3><h1>${accucomp}%</h1>`;
+//             if(Number(inputcom.value) > wpmcountcomp){
+//                 alert("your time is expired, you do not reach your target try again ");
                 
-            }
-            else if(Number(inputcom.value) < wpmcountcomp){
-                alert("your time is expired ,you reach your target congratulations");
+//             }
+//             else if(Number(inputcom.value) < wpmcountcomp){
+//                 alert("your time is expired ,you reach your target congratulations");
               
 
-            }
-            else{
-                alert("your time is expired ,you perfectly match your target ")
-            }
-            time=0;
-            return;
-        }
+//             }
+//             else{
+//                 alert("your time is expired ,you perfectly match your target ")
+//             }
+//             time=0;
+//             return;
+//         }
 
-            }, 1000);
-            timestart = true;
-        }
+//             }, 1000);
+//             timestart = true;
+//         }
     
         
 
-       if (currentindex >=span.length-1 ) {
-            box.forEach(box=>{
-                box.style.display="";
-            });
+//        if (currentindex >=span.length-1 ) {
+//             box.forEach(box=>{
+//                 box.style.display="";
+//             });
             
-            clearInterval(timer);
-               let wpm = Math.floor((count / time) * 60);
+//             clearInterval(timer);
+//                let wpm = Math.floor((count / time) * 60);
                
-           let per = Math.floor(((span.length - accuracycount) / span.length) * 100);
+//            let per = Math.floor(((span.length - accuracycount) / span.length) * 100);
            
-             onetext.innerHTML = `<h3>WPM<h3><h1>${wpm}</h1>`;
-            // timebox.style.display = "flex";
-            wpmbox.innerHTML= `<h3>WPM<h3><h1>${wpm}</h1>`;
-              twotext.innerHTML = `<h3>Accuracy</h3><h1>${per}%</h1>`;
-            // two.style.display = "flex";
-            accuracybox.innerHTML= `<h3>Accuracy</h3><h1>${per}%</h1>`;
+//              onetext.innerHTML = `<h3>WPM<h3><h1>${wpm}</h1>`;
+//             // timebox.style.display = "flex";
+//             wpmbox.innerHTML= `<h3>WPM<h3><h1>${wpm}</h1>`;
+//               twotext.innerHTML = `<h3>Accuracy</h3><h1>${per}%</h1>`;
+//             // two.style.display = "flex";
+//             accuracybox.innerHTML= `<h3>Accuracy</h3><h1>${per}%</h1>`;
 
-            // next.style.display = "flex";
-            threetext.innerHTML=`<h3>Word</h3><h1>${count+1}</h1><h3>typed</h3>`
-            fourtext.innerHTML=`<h3>Error</h3><h1>${accuracycount}</h1>`;
-           return;
+//             // next.style.display = "flex";
+//             threetext.innerHTML=`<h3>Word</h3><h1>${count+1}</h1><h3>typed</h3>`
+//             fourtext.innerHTML=`<h3>Error</h3><h1>${accuracycount}</h1>`;
+//            return;
            
-        }
+//         }
 
           
           
         
       
 
-       let pressed = e.key;
+//        let pressed = e.key;
 
-if (pressed === "Enter") {
-    pressed = "\n";
-}
+// if (pressed === "Enter") {
+//     pressed = "\n";
+// }
 
-if (pressed === "Tab") {
-    e.preventDefault();
-    pressed = "\t";
-}
+// if (pressed === "Tab") {
+//     e.preventDefault();
+//     pressed = "\t";
+// }
 
-if (
-    pressed !== "\n" &&
-    pressed !== "\t" &&
-    pressed.length > 1
-) {
-    return;
-}
+// if (
+//     pressed !== "\n" &&
+//     pressed !== "\t" &&
+//     pressed.length > 1
+// ) {
+//     return;
+// }
 
-if (span[currentindex]) {
+// if (span[currentindex]) {
 
-   if (pressed === span[currentindex].textContent) {
-    if(c==1){
-        span[currentindex].style.color = "#ADFF2F";
-        //  container.style.backgroundColor="#112011";
-    span[currentindex].classList.remove("cyberactive");
-    // right.style.backgroundColor="#111111";
+//    if (pressed === span[currentindex].textContent) {
+//     if(c==1){
+//         span[currentindex].style.color = "#ADFF2F";
+//         //  container.style.backgroundColor="#112011";
+//     span[currentindex].classList.remove("cyberactive");
+//     // right.style.backgroundColor="#111111";
 
-    }
-else{
-    span[currentindex].style.color = "white";
-    wpmcountcomp++;
-    span[currentindex].classList.remove("active");
-}
+//     }
+// else{
+//     span[currentindex].style.color = "white";
+//     wpmcountcomp++;
+//     span[currentindex].classList.remove("active");
+// }
 
-    currentindex++;
+//     currentindex++;
 
-    // IMPORTANT FIX: skip newline automatically
-    while (
-        span[currentindex] &&
-        span[currentindex].textContent === "\n"
-    ) {
-        if(c==1){
-            span[currentindex].classList.remove("cyberactive");
+//     // IMPORTANT FIX: skip newline automatically
+//     while (
+//         span[currentindex] &&
+//         span[currentindex].textContent === "\n"
+//     ) {
+//         if(c==1){
+//             span[currentindex].classList.remove("cyberactive");
 
-        }
-        else{
-        span[currentindex].classList.remove("active");
-        }
-         currentindex++;
-    }
+//         }
+//         else{
+//         span[currentindex].classList.remove("active");
+//         }
+//          currentindex++;
+//     }
 
-    if (span[currentindex]) {
-        if(c==1){
-              span[currentindex].classList.add("cyberactive");
+//     if (span[currentindex]) {
+//         if(c==1){
+//               span[currentindex].classList.add("cyberactive");
 
-        }
-        else{
-        span[currentindex].classList.add("active");
-        }
+//         }
+//         else{
+//         span[currentindex].classList.add("active");
+//         }
+//         return;
+//     }
+
+   
+// } else {
+//         span[currentindex].style.color = "red";
+//         accuracycount++;
+//     }
+// }
+// });
+// }
+function typing() {
+
+    let input = document.querySelector("#typingInput");
+
+    if(!input){
+        console.log("input not found");
         return;
     }
 
-   
-} else {
-        span[currentindex].style.color = "red";
-        accuracycount++;
+
+    function processKey(pressed){
+
+        if(!pressed) return;
+
+
+        if(!timestart){
+
+    timer = setInterval(()=>{
+
+    document.querySelector(".timebox").innerHTML = time + "sec";
+
+    if(compint==1){
+
+        document.querySelector(".clockdisplay").innerHTML = time+"sec";
+
+
+        if(time===60){
+
+            clearInterval(timer);
+
+            console.log("aa gaya");
+
+
+            let accucomp = Math.floor(
+                ((wpmcountcomp - accuracycount) / wpmcountcomp) * 100
+            );
+
+
+            accuracyboxcomp.style.display="";
+            wpmboxcomp.style.display="";
+
+
+            wpmbox.innerHTML =
+            `<h3>WPM<h3><h1>${Math.floor(wpmcountcomp/5)}</h1>`;
+
+
+            accuracybox.innerHTML =
+            `<h3>Accuracy</h3><h1>${accucomp}%</h1>`;
+
+
+            if(Number(inputcom.value) > wpmcountcomp){
+
+                alert("your time is expired, you do not reach your target try again");
+
+            }
+            else if(Number(inputcom.value) < wpmcountcomp){
+
+                alert("your time is expired ,you reach your target congratulations");
+
+            }
+            else{
+
+                alert("your time is expired ,you perfectly match your target");
+
+            }
+
+
+            time=0;
+            timestart=false;
+
+            return;
+        }
     }
-}
-});
+
+
+    time++;
+
+},1000);
+
+            timestart=true;
+        }
+
+
+
+        if(currentindex >= span.length-1){
+
+    clearInterval(timer);
+
+
+    let wpm = Math.floor((count / time) * 60);
+
+    let accuracy = Math.floor(
+        ((span.length - accuracycount) / span.length) * 100
+    );
+
+
+    // show result boxes
+    box.forEach(box=>{
+        box.style.display="";
+    });
+
+
+    // desktop result
+    onetext.innerHTML =
+    `<h3>WPM</h3><h1>${wpm}</h1>`;
+
+
+    twotext.innerHTML =
+    `<h3>Accuracy</h3><h1>${accuracy}%</h1>`;
+
+
+    threetext.innerHTML =
+    `<h3>Word</h3><h1>${count+1}</h1><h3>typed</h3>`;
+
+
+    fourtext.innerHTML =
+    `<h3>Error</h3><h1>${accuracycount}</h1>`;
+
+
+    // bottom result
+    wpmbox.innerHTML =
+    `<h3>WPM</h3><h1>${wpm}</h1>`;
+
+
+    accuracybox.innerHTML =
+    `<h3>Accuracy</h3><h1>${accuracy}%</h1>`;
+
+
+    return;
 }
 
+
+        if(pressed === span[currentindex].textContent){
+
+
+            if(c==1){
+
+                span[currentindex].style.color="#ADFF2F";
+                span[currentindex]
+                .classList.remove("cyberactive");
+
+            }
+            else{
+
+                span[currentindex].style.color="white";
+                span[currentindex]
+                .classList.remove("active");
+
+                wpmcountcomp++;
+            }
+
+
+
+            currentindex++;
+
+
+            if(span[currentindex]){
+
+
+                if(c==1){
+
+                    span[currentindex]
+                    .classList.add("cyberactive");
+
+                }
+                else{
+
+                    span[currentindex]
+                    .classList.add("active");
+
+                }
+
+            }
+
+
+
+        }
+        else{
+
+
+            span[currentindex].style.color="red";
+            accuracycount++;
+
+        }
+
+    }
+
+
+
+    // Desktop keyboard
+    document.addEventListener("keydown",(e)=>{
+
+
+        if(
+            e.key==="Shift" ||
+            e.key==="Control" ||
+            e.key==="Alt" ||
+            e.key==="CapsLock"
+        ){
+            return;
+        }
+
+
+        processKey(e.key);
+
+
+    });
+
+
+
+    // Mobile keyboard
+    input.addEventListener("input",(e)=>{
+
+
+        let value=e.target.value;
+
+
+        let last=value[value.length-1];
+
+
+        processKey(last);
+
+
+        // clear input after every character
+        input.value="";
+
+
+    });
+
+
+
+    // focus mobile input
+
+    para.addEventListener("click",()=>{
+
+        input.focus();
+
+    });
+
+
+    para.addEventListener("touchstart",()=>{
+
+        input.focus();
+
+    });
+
+
+}
     
 
 
