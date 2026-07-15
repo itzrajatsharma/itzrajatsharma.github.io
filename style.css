@@ -291,6 +291,8 @@ pre{
     display: flex;
      align-items: center; 
      flex-wrap: wrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
      
 
     
@@ -762,4 +764,8 @@ border-radius: 4px;
    opacity: 0;
     position: fixed;
     left: -9999px;
+}
+.moonicon{
+    width: 30px;
+    fill: #00ffff;
 }
