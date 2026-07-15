@@ -195,6 +195,29 @@ para.addEventListener("touchstart",()=>{
     inputmobile.focus();
 
 });
+inputmobile.addEventListener("input", () => {
+    let value = inputmobile.value;
+
+    for (let i = 0; i < span.length; i++) {
+
+        span[i].classList.remove("active");
+
+        if (i < value.length) {
+
+            if (value[i] === span[i].textContent) {
+                span[i].style.color = "white";
+            } else {
+                span[i].style.color = "red";
+            }
+
+        }
+
+    }
+
+    if (value.length < span.length) {
+        span[value.length].classList.add("active");
+    }
+});
                
     
 
