@@ -31,7 +31,7 @@ body{
 
 }
 .left{
-    background-color: #090e15;
+    background-color:  #071018;
     backdrop-filter: blur(15px);
 
     height: 100%;
@@ -486,6 +486,25 @@ pre{
     position: relative;
      font-size: clamp(3px,5vw,20px);
 }
+.lessonicon{
+   position: absolute;
+    left: 0;
+    margin-left: 3vw;
+    max-width: 20%;
+    fill: #00F5FF;
+    width: 32px;
+}
+.lesson{
+    position: relative;
+    font-size: clamp(2px,5vw,20px);
+  
+
+   
+}
+.lesson a{
+    color: white;
+    text-decoration: none;
+}
 @media (max-width:1243px ){
     .intericon{
        margin-left: 0;
@@ -512,6 +531,13 @@ pre{
 
     }
     .cybericon{
+                 margin-left: 0;
+       margin-right: 2px;
+
+
+    }
+    .lessonicon
+    {
                  margin-left: 0;
        margin-right: 2px;
 
@@ -714,24 +740,16 @@ border-radius:6px ;
     width:35px;
 
 }
-.left .sections{
-    position: absolute;
-   
-    height: 45px;
-    bottom: 11%;
-    width: 98%;
-    margin-left: 1px;
-    
-   
-    
-    
+.right .sections{
+    width:30%;
 }
 
-.left .sections ul{
+.right .sections ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+    
     
     color: aliceblue;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -739,26 +757,24 @@ border-radius:6px ;
     border: none;
 
 }
-.left .sections ul li:hover{
-    border-color: aqua;
-    background-color: #050911;
-   
+
+.right .sections ul li{
+    border: none;
+    
 
 }
-.left .sections ul li{
-    border: none;
-    border: 3px solid;
-border-image: linear-gradient(45deg, #00ff88, #00ffff, #0066ff) 1;
-border-radius: 4px;
-}
-.left .sections ul li a{
-    color: aliceblue;
-     font-size: clamp(2px,5vw,15px);
+.right .sections ul li a{
+    color: rgb(170, 182, 194);
+     font-size: clamp(2px,5vw,18px);
      text-decoration: none;
     
    
     
 
+}
+.right .sections ul li a:hover{
+    color: aqua;
+    text-decoration: underline;
 }
 #typingInput{
    opacity: 0;

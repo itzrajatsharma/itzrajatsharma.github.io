@@ -1,0 +1,201 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+  
+    width: 100vw;
+    overflow-x: hidden;
+    
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.container{
+    background-color: #020910;
+    width: 100vw;
+   min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+}
+.nav{
+    margin-top: 4px;
+    background-color: #00050b;
+    width: 90%;
+    height: 12vh;
+    align-self: center;
+    border: 1px solid rgb(20, 192, 20);
+    border-radius: 4px;
+    
+
+}
+.nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: clamp(2px,5vw,20px);
+
+}
+.nav ul a{
+    color: rgb(207, 200, 200);
+    text-decoration: none;
+}
+.nav ul a:hover{
+    color: aqua;
+
+}
+.container>img{
+    margin-top: 20px;
+    width: 90%;
+height: 55vh;
+    align-self: center;
+}
+.beginners{
+    color: #50b226;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(2px,5vw,25px);
+    font-weight: bolder;
+    align-self: center;
+    margin-top: 2vh;
+    display: flex;
+    gap: 8px;
+    align-items:center;
+
+  
+    width: 90%;
+
+}
+.beginner-card {
+    width: 164px;
+    height: 188px;
+    padding: 16px 18px;
+
+    background: linear-gradient(
+        145deg,
+        #03150d,
+        #02100b
+    );
+
+    border: 1px solid #188c32;
+    border-radius: 12px;
+
+    color: white;
+
+    box-shadow:
+        inset 0 0 20px rgba(0, 255, 70, 0.025),
+        0 0 8px rgba(0, 255, 70, 0.03);
+
+    font-family: Arial, sans-serif;
+}
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lesson-number {
+    font-size: 20px;
+    font-weight: bold;
+    color: #7cff45;
+}
+
+.completed {
+    width: 23px;
+    height: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #75ed3b;
+    color: #071108;
+
+    border-radius: 50%;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+.beginner-card h3 {
+    margin: 14px 0 13px;
+
+    font-size: 15px;
+    letter-spacing: 0.5px;
+
+    color: #f2f2f2;
+}
+.keys {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.keys span {
+    min-width: 16px;
+    height: 17px;
+
+    padding: 0 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #235e2d;
+    border-radius: 3px;
+
+    background: rgba(0, 40, 20, 0.5);
+
+    color: #d7fbd2;
+
+    font-size: 10px;
+}
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 17px;
+
+    font-size: 10px;
+    color: #b9b9b9;
+}
+
+.card-bottom span:last-child {
+    color: white;
+}
+.beginner-card button {
+    width: 100%;
+    height: 30px;
+
+    margin-top: 12px;
+
+    border: 1px solid #6be832;
+    border-radius: 5px;
+
+    background: transparent;
+
+    color: #72ed35;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.beginner-card button:hover {
+    background: #65e82f;
+    color: #071108;
+}
+.beginnerscontent{
+    margin-top: 15px;
+    width: 90%;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    height: 35vh;
+}
+.arrow{
+    width:32px;
+    fill: #65e82f;
+}

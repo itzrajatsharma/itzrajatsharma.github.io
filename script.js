@@ -70,9 +70,9 @@ if(window.innerWidth <= 768){
     re[0].style.display="none";
     nav.style.display="flex";
     text.style.display="flex";
-    nav.style.justifyContent="center";
+    // nav.style.justifyContent="center";
     
-    nav.style.alignItems="center";
+    // nav.style.alignItems="center";
     text.style.justifyContent="center";
     text.style.alignItems="center";
     para.style.height="40%";
@@ -475,52 +475,114 @@ right.style.backgroundRepeat = "no-repeat";
 })
 
 })
+function codedisplay() {
 
+    count = 0;
 
+    document.querySelector(".timebox").innerHTML =
+        time + "sec";
 
-function codedisplay(){
-     count = 0;
-     
-        let timebox = document.querySelector(".timebox").innerHTML = time + "sec";
-    // two.style.display = "none";
-    // next.style.display="none";
-    // timebox.style.display = "none";
     para.innerHTML = "";
-    let pre=document.createElement("pre");
-    let currentparaindex = Math.floor(Math.random() * pargraph.length);
 
-     let chars = pargraph[currentparaindex].split("");
+    let pre = document.createElement("pre");
+
+    let currentparaindex =
+        Math.floor(Math.random() * pargraph.length);
+
+    let chars =
+        pargraph[currentparaindex].split("");
+
     chars.forEach(char => {
-        let span = document.createElement("span");
-        span.id="pre";
-        console.log(JSON.stringify(char));
-        if (char === " ") {
-            count += 1;
-            //   span.style.marginLeft = "0px";
-            // // span.innerHTML="&nbsp";
-             span.style.minWidth = "2px";
-             span.style.minHeight = "25px";
-        }
-//      else  if (char === "\n") {
-//     span.style.display = "inline-block";
-//     span.style.width = "4px";
-//     span.style.height = "1em";
-//      span.style.verticalAlign = "bottom";
-// }
 
-        span.textContent = char;
+        let span =
+            document.createElement("span");
+
+        span.id = "pre";
+
+        if (char === " ") {
+
+            count += 1;
+
+            span.style.minWidth = "2px";
+            span.style.minHeight = "25px";
+
+        }
+
+        if (char === "\n") {
+
+            span.dataset.newline = "true";
+
+            // This keeps the newline working
+            span.textContent = "\n";
+
+            // Do not give the newline span the cursor
+            span.style.display = "contents";
+
+        }
+        else {
+
+            span.textContent = char;
+
+        }
+
         pre.append(span);
+
+    });
+
+    para.append(pre);
+
+    span =
+        para.querySelectorAll("span");
+
+    r = 1;
+
+}
+
+
+
+// function codedisplay(){
+//      count = 0;
+     
+//         let timebox = document.querySelector(".timebox").innerHTML = time + "sec";
+//     // two.style.display = "none";
+//     // next.style.display="none";
+//     // timebox.style.display = "none";
+//     para.innerHTML = "";
+//     let pre=document.createElement("pre");
+//     let currentparaindex = Math.floor(Math.random() * pargraph.length);
+
+//      let chars = pargraph[currentparaindex].split("");
+//     chars.forEach(char => {
+//         let span = document.createElement("span");
+//         span.id="pre";
+//         console.log(JSON.stringify(char));
+//         if (char === " ") {
+//             count += 1;
+//             //   span.style.marginLeft = "0px";
+//             // // span.innerHTML="&nbsp";
+//              span.style.minWidth = "2px";
+//              span.style.minHeight = "25px";
+//         }
+// //      else  if (char === "\n") {
+// //     span.style.display = "inline-block";
+// //     span.style.width = "4px";
+// //     span.style.height = "1em";
+// //      span.style.verticalAlign = "bottom";
+// // }
+
+//         span.textContent = char;
+//         pre.append(span);
 
        
         
 
-    })
+//     })
   
-    para.append(pre);
-      span = para.querySelectorAll("span");
-      r=1;
+//     para.append(pre);
+//       span = para.querySelectorAll("span");
+//       r=1;
 
-}
+// }
 code.addEventListener("click",()=>{
     light.style.display="block";
     lightonn.style.display="none"
@@ -924,183 +986,216 @@ function typing() {
     }
 
 
-    function processKey(pressed){
+    function processKey(pressed) {
 
-        if(!pressed) return;
+    if (pressed === "Enter") {
+        pressed = "\n";
+    }
 
-
-        if(!timestart){
-
-    timer = setInterval(()=>{
-
-    document.querySelector(".timebox").innerHTML = time + "sec";
-
-    if(compint==1){
-
-        document.querySelector(".clockdisplay").innerHTML = time+"sec";
+    if (!pressed) return;
 
 
-        if(time===60){
+    if (!timestart) {
 
-            clearInterval(timer);
+        timer = setInterval(() => {
 
-            console.log("aa gaya");
+            document.querySelector(".timebox").innerHTML =
+                time + "sec";
 
+            if (compint == 1) {
 
-            let accucomp = Math.floor(
-                ((wpmcountcomp - accuracycount) / wpmcountcomp) * 100
-            );
-
-
-            accuracyboxcomp.style.display="";
-            wpmboxcomp.style.display="";
+                document.querySelector(".clockdisplay").innerHTML =
+                    time + "sec";
 
 
-            wpmbox.innerHTML =
-            `<h3>WPM<h3><h1>${Math.floor(wpmcountcomp/5)}</h1>`;
+                if (time === 60) {
+
+                    clearInterval(timer);
+
+                    let accucomp = Math.floor(
+                        ((wpmcountcomp - accuracycount) /
+                            wpmcountcomp) * 100
+                    );
 
 
-            accuracybox.innerHTML =
-            `<h3>Accuracy</h3><h1>${accucomp}%</h1>`;
+                    accuracyboxcomp.style.display = "";
+                    wpmboxcomp.style.display = "";
 
 
-            if(Number(inputcom.value) > wpmcountcomp){
+                    wpmbox.innerHTML =
+                        `<h3>WPM</h3>
+                         <h1>${Math.floor(wpmcountcomp / 5)}</h1>`;
 
-                alert("your time is expired, you do not reach your target try again");
+
+                    accuracybox.innerHTML =
+                        `<h3>Accuracy</h3>
+                         <h1>${accucomp}%</h1>`;
+
+
+                    if (Number(inputcom.value) > wpmcountcomp) {
+
+                        alert(
+                            "your time is expired, you do not reach your target try again"
+                        );
+
+                    }
+                    else if (Number(inputcom.value) < wpmcountcomp) {
+
+                        alert(
+                            "your time is expired, you reach your target congratulations"
+                        );
+
+                    }
+                    else {
+
+                        alert(
+                            "your time is expired, you perfectly match your target"
+                        );
+
+                    }
+
+
+                    time = 0;
+                    timestart = false;
+
+                    return;
+
+                }
 
             }
-            else if(Number(inputcom.value) < wpmcountcomp){
 
-                alert("your time is expired ,you reach your target congratulations");
+            time++;
 
-            }
-            else{
+        }, 1000);
 
-                alert("your time is expired ,you perfectly match your target");
+        timestart = true;
 
-            }
-
-
-            time=0;
-            timestart=false;
-
-            return;
-        }
     }
 
 
-    time++;
+    // Check the typed character
+    if (pressed === span[currentindex].textContent) {
 
-},1000);
 
-            timestart=true;
+        // Mark current character as correct
+        if (c == 1) {
+
+            span[currentindex].style.color = "#ADFF2F";
+
+            span[currentindex]
+                .classList.remove("cyberactive");
+
+        }
+        else {
+
+            span[currentindex].style.color = "white";
+
+            span[currentindex]
+                .classList.remove("active");
+
+            wpmcountcomp++;
+
         }
 
 
-
-        if(currentindex >= span.length-1){
-
-    clearInterval(timer);
-
-
-    let wpm = Math.floor((count / time) * 60);
-
-    let accuracy = Math.floor(
-        ((span.length - accuracycount) / span.length) * 100
-    );
-
-
-    // show result boxes
-    box.forEach(box=>{
-        box.style.display="";
-    });
-
-
-    // desktop result
-    onetext.innerHTML =
-    `<h3>WPM</h3><h1>${wpm}</h1>`;
-
-
-    twotext.innerHTML =
-    `<h3>Accuracy</h3><h1>${accuracy}%</h1>`;
-
-
-    threetext.innerHTML =
-    `<h3>Word</h3><h1>${count+1}</h1><h3>typed</h3>`;
-
-
-    fourtext.innerHTML =
-    `<h3>Error</h3><h1>${accuracycount}</h1>`;
-
-
-    // bottom result
-    wpmbox.innerHTML =
-    `<h3>WPM</h3><h1>${wpm}</h1>`;
-
-
-    accuracybox.innerHTML =
-    `<h3>Accuracy</h3><h1>${accuracy}%</h1>`;
-
-
-    return;
+        // Move to next character
+        currentindex++;
+        while (
+    span[currentindex] &&
+    span[currentindex].dataset.newline === "true"
+) {
+    currentindex++;
 }
 
 
-        if(pressed === span[currentindex].textContent){
+        // Add cursor to next character
+        if (span[currentindex]) {
 
+            if (c == 1) {
 
-            if(c==1){
-
-                span[currentindex].style.color="#ADFF2F";
                 span[currentindex]
-                .classList.remove("cyberactive");
-
-            }
-            else{
-
-                span[currentindex].style.color="white";
-                span[currentindex]
-                .classList.remove("active");
-
-                wpmcountcomp++;
-            }
-
-
-
-            currentindex++;
-
-
-            if(span[currentindex]){
-
-
-                if(c==1){
-
-                    span[currentindex]
                     .classList.add("cyberactive");
 
-                }
-                else{
+            }
+            else {
 
-                    span[currentindex]
+                span[currentindex]
                     .classList.add("active");
-
-                }
 
             }
 
-
-
         }
-        else{
 
 
-            span[currentindex].style.color="red";
-            accuracycount++;
+        // Finish after the last character is processed
+        if (currentindex >= span.length) {
+
+            clearInterval(timer);
+
+
+            let wpm = Math.floor(
+                (count / time) * 60
+            );
+
+
+            let accuracy = Math.floor(
+                ((span.length - accuracycount) /
+                    span.length) * 100
+            );
+
+
+            box.forEach(box => {
+                box.style.display = "";
+            });
+
+
+            onetext.innerHTML =
+                `<h3>WPM</h3>
+                 <h1>${wpm}</h1>`;
+
+
+            twotext.innerHTML =
+                `<h3>Accuracy</h3>
+                 <h1>${accuracy}%</h1>`;
+
+
+            threetext.innerHTML =
+                `<h3>Word</h3>
+                 <h1>${count + 1}</h1>
+                 <h3>typed</h3>`;
+
+
+            fourtext.innerHTML =
+                `<h3>Error</h3>
+                 <h1>${accuracycount}</h1>`;
+
+
+            wpmbox.innerHTML =
+                `<h3>WPM</h3>
+                 <h1>${wpm}</h1>`;
+
+
+            accuracybox.innerHTML =
+                `<h3>Accuracy</h3>
+                 <h1>${accuracy}%</h1>`;
+
+
+            return;
 
         }
 
     }
 
+
+    else {
+
+        span[currentindex].style.color = "red";
+
+        accuracycount++;
+
+    }
+
+}
 
 
     // Desktop keyboard
@@ -1295,7 +1390,9 @@ para.style.backgroundColor="transparent";
     left.style.border="1px solid#39FF14";
     
     box.forEach(box=>{
+        
          box.style.borderColor="#00AA00";
+         box.style.display="none";
 
     })
 

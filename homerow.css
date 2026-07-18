@@ -1,0 +1,177 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #020910;
+    
+
+}
+.container{
+background-color: #020910;
+   min-height:  95vh;
+   border: 1px solid rgb(58, 227, 58);
+   min-width: 95vw;
+   display: flex;
+   flex-direction: column;
+
+   
+
+   border-radius: 5px;
+   
+}
+.container .nav{
+    align-self: center;
+    margin-top: 4px;
+    width: 97%;
+    height: 5vh;
+    
+
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.container svg{
+    margin-left: 5px;
+    fill: aliceblue;
+    width: 32px;
+}
+.para{
+    align-self: center;
+       background-color: #03070b;
+       color: aliceblue;
+       display: flex;
+       overflow-x: auto;
+
+align-items: center;
+/* justify-content: center; */
+ box-sizing: border-box; 
+padding-left: 20px;
+
+
+   
+font-size: clamp(3px,4vw,25px);
+
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 30vh;
+    width: 50vw;
+   border: 1px solid grey;
+}
+.para::-webkit-scrollbar{
+    display: none;
+}
+.heading{
+    color: rgb(35, 251, 35);
+     width: 50vw;
+     height: 5vh;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     font-size: clamp(2px,3vw,18px);
+
+     align-self: center;
+    
+}
+.heading .re{
+    fill:rgb(22, 234, 46);
+    width: 30px;
+
+}
+#display{
+    color: rgb(139, 154, 167);
+    
+    height: 20px;
+    width: 20px;
+}
+.para span {
+    color: #777;
+}
+
+.para span.active {
+    border-left: 2px solid rgb(74, 211, 74);
+}
+
+.para span.correct {
+    color: white;
+}
+
+.para span.wrong {
+    color: red;
+}
+.boxes{
+    width: 80vw;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+   
+    align-self: center;
+    margin-top: 5vh;
+    
+}
+.box{
+    height: 100%;
+    width:15vw;
+    
+    border: 1px solid aqua
+
+}
+.one,.two,.three{
+   
+    color: aliceblue;
+    position: relative;
+    
+}
+ .one .twologoicon{
+    
+    position: absolute;
+    top:40%;
+    width: 25%;
+    height: 30%;
+    fill:aquamarine
+}
+.two .erroricon{
+    fill: crimson;
+     position: absolute;
+    top:40%;
+    width: 25%;
+   
+}
+.three .threeicon{
+    fill: rgb(50, 122, 237);
+     position: absolute;
+    top:40%;
+    width: 25%;
+    
+}
+.stat-label{
+    width:20%;
+    height: 10%;
+    
+    position: absolute;
+    right: 42%
+    
+    ;
+    font-size: clamp(2px,3vw,23px);
+    margin-top: 10px;
+ 
+
+
+}
+.stat-value{
+    width:60%;
+  
+    left:50%;
+    position: absolute;
+    top:50%;
+    font-size: clamp(3px,3vw,24px);
+
+
+}
