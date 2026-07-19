@@ -505,6 +505,24 @@ pre{
     color: white;
     text-decoration: none;
 }
+.gameicon{
+    fill: #00ffff;
+    width: 32px;
+    position: absolute;
+     left: 0;
+    margin-left: 3vw;
+    max-width: 20%;
+}
+.game{
+    position: relative;
+    font-size:clamp(2px,5vw,20px) ;
+    
+}
+.game a{
+    color:aliceblue ;
+    text-decoration: none;
+
+}
 @media (max-width:1243px ){
     .intericon{
        margin-left: 0;
@@ -541,6 +559,11 @@ pre{
                  margin-left: 0;
        margin-right: 2px;
 
+
+    }
+    .gameicon{
+          margin-left: 0;
+       margin-right: 2px;
 
     }
     
@@ -785,3 +808,4 @@ border-radius:6px ;
     width: 30px;
     fill: #00ffff;
 }
+
