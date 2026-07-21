@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Custom Typing Practice-TypeWeb</title>
+    <link rel="shortcut icon" href="mylogo.png" type="image/x-icon">
+    <meta 
+    name="description" 
+    content="Practice typing with your own custom text on TypeWeb. Paste any paragraph, improve your typing speed and accuracy, and track your WPM and performance."
+>
+
+<meta 
+    name="keywords" 
+    content="custom typing practice, typing practice with own text, typing speed test, typing accuracy test, custom typing test, WPM test"
+>
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://typeweb.me/custom-practice.html">
+    <script>(function(s){s.dataset.zone='11355271',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        /* ==============================
+           RESET
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+
+            font-family: "Inter", sans-serif;
+
+            color: #f4f3ff;
+
+            background:
+
+                /* Top purple glow */
+                radial-gradient(
+                    circle at 50% -20%,
+                    rgba(100, 50, 220, 0.14),
+                    transparent 45%
+                ),
+
+                /* Bottom left blue glow */
+                radial-gradient(
+                    circle at 0% 100%,
+                    rgba(40, 70, 180, 0.08),
+                    transparent 40%
+                ),
+
+                /* Main background */
+                #070817;
+
+            padding: 20px;
+        }
+
+
+        /* ==============================
+           MAIN CONTAINER
+        ============================== */
+
+        .container {
+            width: 100%;
+            max-width: 1500px;
+
+            min-height: calc(100vh - 40px);
+
+            margin: auto;
+
+            padding: 25px 30px;
+
+            border: 1px solid rgba(150, 130, 255, 0.14);
+
+            border-radius: 22px;
+
+            background: rgba(5, 6, 18, 0.35);
+
+            box-shadow:
+                inset 0 0 50px rgba(100, 60, 200, 0.02),
+                0 0 40px rgba(80, 40, 180, 0.03);
+        }
+
+
+        /* ==============================
+           HEADER
+        ============================== */
+
+        .top-bar {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            margin-bottom: 10px;
+        }
+
+        .back {
+            color: #d8d6f2;
+
+            font-size: 14px;
+
+            cursor: pointer;
+        }
+
+        .back span {
+            font-size: 25px;
+
+            margin-right: 10px;
+
+            vertical-align: middle;
+        }
+
+        .badge {
+            position: absolute;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            padding: 8px 32px;
+
+            border: 1px solid #8b3fff;
+
+            border-radius: 30px;
+
+            color: #c27bff;
+
+            font-size: 14px;
+
+            letter-spacing: 1px;
+
+            font-weight: 600;
+        }
+
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+            text-align: center;
+
+            margin: 5px 0 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 4vw, 56px);
+
+            line-height: 1.1;
+
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(
+                90deg,
+                #b05cff,
+                #8754ff,
+                #c77bff
+            );
+
+           
+        -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+             
+        }
+
+        .hero p {
+            margin-top: 10px;
+
+            color: #c2c0d7;
+
+            font-size: 16px;
+        }
+
+
+        /* ==============================
+           CONTENT GRID
+        ============================== */
+
+        .content {
+            display: grid;
+
+            grid-template-columns: 1.05fr 1fr;
+
+            gap: 20px;
+        }
+
+
+        /* ==============================
+           CARD
+        ============================== */
+
+        .card {
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(27, 26, 53, 0.72),
+                    rgba(12, 13, 30, 0.72)
+                );
+
+            border: 1px solid rgba(150, 130, 255, 0.16);
+
+            border-radius: 16px;
+
+            box-shadow:
+
+                inset 0 0 30px rgba(100, 50, 220, 0.025),
+
+                0 0 20px rgba(90, 40, 200, 0.025);
+
+            backdrop-filter: blur(14px);
+        }
+
+
+        /* ==============================
+           SECTION TITLE
+        ============================== */
+
+        .section-title {
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            margin-bottom: 20px;
+        }
+
+        .number {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            width: 28px;
+
+            height: 28px;
+
+            border-radius: 50%;
+
+            background: linear-gradient(
+                135deg,
+                #7626e8,
+                #9d42ff
+            );
+
+            font-weight: 700;
+
+            font-size: 14px;
+        }
+
+        .section-title h2 {
+            font-size: 16px;
+        }
+
+
+        /* ==============================
+           INPUT SECTION
+        ============================== */
+
+        .input-section {
+            padding: 22px;
+        }
+
+        .input-section label {
+            display: block;
+
+            margin-bottom: 14px;
+
+            color: #d7d5e8;
+
+            font-size: 15px;
+        }
+
+        textarea {
+            width: 100%;
+
+            height: 175px;
+
+            resize: vertical;
+
+            padding: 18px;
+
+            color: #eae7f7;
+
+            font-family: "Share Tech Mono", monospace;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            background: rgba(8, 9, 25, 0.65);
+
+            border: 1px solid #8544ef;
+
+            border-radius: 12px;
+
+            outline: none;
+
+            transition: 0.3s;
+        }
+
+        textarea::placeholder {
+            color: #aaa8bd;
+        }
+
+        textarea:focus {
+            border-color: #b45bff;
+
+            box-shadow:
+                0 0 0 3px rgba(145, 55, 255, 0.08),
+                0 0 20px rgba(130, 50, 255, 0.12);
+        }
+
+        .counter {
+            display: flex;
+
+            justify-content: space-between;
+
+            margin: 10px 8px 22px;
+
+            color: #b8b5cc;
+
+            font-size: 14px;
+        }
+
+
+        /* ==============================
+           BUTTONS
+        ============================== */
+
+        .button-row {
+            display: flex;
+
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 12px 24px;
+
+            color: #f4f2ff;
+
+            background: rgba(30, 30, 60, 0.6);
+
+            border: 1px solid rgba(150, 130, 255, 0.18);
+
+            border-radius: 10px;
+
+            font-size: 14px;
+
+            cursor: pointer;
+
+            transition: 0.25s;
+        }
+
+        button:hover {
+            border-color: #9850ff;
+
+            background: rgba(100, 50, 180, 0.18);
+        }
+
+
+        /* ==============================
+           PRACTICE SETTINGS
+        ============================== */
+
+        .settings {
+            padding: 20px 22px 24px;
+
+            border-top: 1px solid rgba(150, 130, 255, 0.12);
+        }
+
+        .settings-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1.4fr;
+
+            gap: 25px;
+
+            margin-bottom: 20px;
+        }
+
+        .setting-label {
+            margin-bottom: 10px;
+
+            color: #d8d6e9;
+
+            font-size: 14px;
+        }
+
+        select {
+            width: 100%;
+
+            padding: 12px;
+
+            color: white;
+
+            background: rgba(25, 25, 50, 0.7);
+
+            border: 1px solid rgba(150, 130, 255, 0.18);
+
+            border-radius: 9px;
+
+            outline: none;
+        }
+
+
+        /* ==============================
+           TIME BUTTONS
+        ============================== */
+
+        .time-options {
+            display: flex;
+
+            gap: 8px;
+        }
+
+        .time-options button {
+            flex: 1;
+
+            padding: 12px 10px;
+        }
+
+        .time-options button.active,
+        .difficulty button.active {
+            background: linear-gradient(
+                135deg,
+                #7a27e8,
+                #6b37e8
+            );
+
+            border-color: #9c52ff;
+
+            box-shadow:
+                0 0 15px rgba(120, 40, 240, 0.25);
+        }
+
+
+        /* ==============================
+           DIFFICULTY
+        ============================== */
+
+        .difficulty {
+            display: flex;
+
+            margin-bottom: 20px;
+        }
+
+        .difficulty button {
+            flex: 1;
+
+            border-radius: 0;
+        }
+
+        .difficulty button:first-child {
+            border-radius: 9px 0 0 9px;
+        }
+
+        .difficulty button:last-child {
+            border-radius: 0 9px 9px 0;
+        }
+
+
+        /* ==============================
+           START BUTTON
+        ============================== */
+
+        .start-btn {
+            width: 100%;
+
+            padding: 15px;
+
+            background: linear-gradient(
+                100deg,
+                #9c1bd2,
+                #6536e8,
+                #245eea
+            );
+
+            border: none;
+
+            box-shadow:
+                0 8px 25px rgba(90, 40, 230, 0.28);
+
+            font-size: 16px;
+
+            font-weight: 600;
+        }
+
+        .start-btn:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 30px rgba(90, 40, 230, 0.4);
+        }
+
+
+        /* ==============================
+           RIGHT SIDE
+        ============================== */
+
+        .right-side {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 20px;
+        }
+
+        .preview {
+            padding: 22px;
+        }
+
+        .preview-text {
+            padding: 22px;
+
+            margin-top: 15px;
+
+            min-height: 260px;
+
+            color: #e6e4ef;
+
+            font-family: "Share Tech Mono", monospace;
+
+            font-size: 19px;
+
+            line-height: 1.9;
+
+            background: rgba(8, 9, 25, 0.45);
+
+            border: 1px solid rgba(150, 130, 255, 0.18);
+
+            border-radius: 13px;
+        }
+
+
+        /* ==============================
+           WHY CUSTOM PRACTICE
+        ============================== */
+
+        .why {
+            padding: 20px 22px;
+
+            border-color: rgba(145, 70, 255, 0.4);
+
+            box-shadow:
+                0 0 25px rgba(100, 40, 220, 0.06);
+        }
+
+        .why h2 {
+            margin-bottom: 20px;
+
+            color: #bd73ff;
+
+            font-size: 18px;
+        }
+
+        .feature {
+            display: flex;
+
+            gap: 15px;
+
+            margin-bottom: 18px;
+        }
+
+        .icon {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-width: 42px;
+
+            height: 42px;
+
+            border-radius: 10px;
+
+            color: #a950ff;
+
+            background: rgba(90, 40, 180, 0.14);
+
+            font-size: 22px;
+        }
+
+        .feature h3 {
+            margin-bottom: 5px;
+
+            font-size: 14px;
+        }
+
+        .feature p {
+            color: #aaa8bf;
+
+            font-size: 13px;
+        }
+
+
+        /* ==============================
+           TOP INFO BOX
+        ============================== */
+
+        .info-box {
+            position: absolute;
+
+            top: 75px;
+
+            right: 50px;
+
+            width: 310px;
+
+            padding: 20px;
+
+            background: rgba(25, 23, 48, 0.7);
+
+            border: 1px solid rgba(150, 130, 255, 0.18);
+
+            border-radius: 16px;
+        }
+
+        .info-box h3 {
+            margin-bottom: 8px;
+
+            font-size: 15px;
+        }
+
+        .info-box p {
+            color: #c1bfd3;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+
+        /* ==============================
+           BOTTOM TIPS
+        ============================== */
+
+        .tips {
+            display: flex;
+
+            justify-content: space-around;
+
+            margin-top: 15px;
+
+            padding: 13px;
+
+            background: rgba(20, 20, 42, 0.55);
+
+            border: 1px solid rgba(150, 130, 255, 0.12);
+
+            border-radius: 14px;
+
+            color: #c6c4d6;
+
+            font-size: 13px;
+        }
+        .preview-text span{
+            color: aliceblue;
+            font-size: clamp(3px,5vw,20px);
+            
+             
+        }
+     
+        .correct{
+         
+            
+          
+            
+           
+            color: #8754ff !important;
+        }
+        .wrong{
+            color: red !important;
+         
+        }
+       .boxes {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    gap: 10px;
+
+   
+}
+
+.box {
+    flex: 1;
+    width: 50%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color:#121026;
+    border: 1px solid  rgba(150, 130, 255, 0.12) ;
+    border-radius: 3px ;
+    margin-top: 2vh;
+}
+.re{
+    fill: #6b37e8;
+    width: 32px;
+    position: absolute;
+    right: 2vw;
+    
+}
+
+        /* ==============================
+           RESPONSIVE
+        ============================== */
+
+        @media (max-width: 1000px) {
+
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .info-box {
+                position: static;
+
+                width: 100%;
+
+                margin-bottom: 20px;
+            }
+
+            .badge {
+                position: static;
+
+                transform: none;
+
+                display: inline-block;
+            }
+
+            .top-bar {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 15px;
+            }
+
+            .hero {
+                text-align: left;
+            }
+            .boxes{
+                width:100%;
+            }
+            .re{
+                width: 30px;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 8px;
+            }
+
+            .container {
+                padding: 18px 12px;
+
+                border-radius: 15px;
+            }
+
+            .settings-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .time-options {
+                flex-wrap: wrap;
+            }
+
+            .time-options button {
+                min-width: 45%;
+            }
+
+            .tips {
+                flex-direction: column;
+
+                gap: 12px;
+            }
+            .re{
+                width: 28px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .preview-text {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <main class="container">
+
+        <header class="top-bar">
+
+            <div class="back" onclick=location.href="index.html">
+                <span>←</span>
+                Back to Home
+            </div>
+
+            <div class="badge">
+                CUSTOM PRACTICE
+            </div>
+
+        </header>
+
+
+        <section class="hero">
+
+            <h1>
+                Custom
+                <span>Typing Practice</span>
+            </h1>
+
+            <p>
+                Paste your own text and practice typing it to improve your speed and accuracy.
+            </p>
+
+        </section>
+
+
+        <div class="content">
+
+
+            <!-- LEFT SIDE -->
+
+            <section class="card">
+
+                <div class="input-section">
+
+                    <div class="section-title">
+
+                        <div class="number">1</div>
+
+                        <h2>Practice here</h2>
+                        <svg onclick="restart()" class="re" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 512.44"><path fill-rule="nonzero" d="M216.81 155.94c0-10.96 8.88-19.84 19.84-19.84 10.95 0 19.83 8.88 19.83 19.84v120.75l82.65 36.33c10.01 4.41 14.56 16.1 10.15 26.11-4.41 10.02-16.1 14.56-26.11 10.15l-93.5-41.1c-7.51-2.82-12.86-10.07-12.86-18.57V155.94zM9.28 153.53c-.54-1.88-.83-3.87-.83-5.92l.16-73.41c0-11.84 9.59-21.43 21.43-21.43 11.83 0 21.43 9.59 21.43 21.43l-.06 27.86a255.053 255.053 0 0144.08-45.53c16.78-13.47 35.57-25.04 56.18-34.24 64.6-28.81 134.7-28.73 195.83-5.31 60.67 23.24 112.56 69.47 141.51 133.25.56 1.01 1.03 2.07 1.41 3.17 28.09 64.15 27.83 133.6 4.6 194.21-22.33 58.29-65.87 108.46-125.8 137.98-.38.22-.76.42-1.16.62-12.44 6.14-25.46 11.26-38.74 15.3-4.96 1.46-10.12.99-14.68-1.46-15.1-8.13-12.86-30.46 3.53-35.45 8.78-2.7 17.32-5.87 25.67-9.6.41-.21.84-.4 1.27-.58 2-.91 3.99-1.85 5.96-2.82.53-.26 1.07-.5 1.62-.71 50.62-25.1 87.42-67.61 106.34-116.98 19.93-52.04 20.04-111.64-4.41-166.46l-.01-.02c-24.46-54.82-68.84-94.54-120.82-114.45-52.04-19.94-111.63-20.04-166.45 4.41a217.791 217.791 0 00-47.75 29.11 216.133 216.133 0 00-37.71 39.04l17.1-.97c11.83-.65 21.96 8.42 22.61 20.26.65 11.83-8.42 21.96-20.26 22.61l-69.71 3.94c-11.02.6-20.56-7.21-22.34-17.85zm237.66 358.9c17.55.55 26.69-20.55 14.26-32.98-3.57-3.45-7.9-5.35-12.86-5.56-11.92-.39-23.48-1.72-35.19-4.01-7.52-1.44-14.84 1.44-19.39 7.59-8.15 11.46-1.97 27.43 11.85 30.22a256.37 256.37 0 0041.33 4.74zm-119.12-34.22c11.75 6.79 26.54-.08 28.81-13.5 1.23-7.97-2.34-15.6-9.26-19.74-10.27-5.99-19.83-12.71-28.99-20.28-13.76-11.34-34.16.32-31.36 17.95.81 4.7 3.05 8.59 6.69 11.68a255.166 255.166 0 0034.11 23.89zm-88.67-86.32c8.88 14.11 30.17 11.17 34.88-4.84 1.51-5.36.76-10.83-2.17-15.57-6.29-10.03-11.7-20.52-16.31-31.43-6.2-14.74-26.7-15.97-34.56-2.04-2.94 5.15-3.3 11.48-1 16.94 5.36 12.77 11.8 25.21 19.16 36.94zM.66 274.2c.62 8.63 6.81 15.71 15.27 17.51 12.64 2.53 23.99-7.36 23.19-20.23-.85-11.87-.73-23.54.32-35.4.59-7.04-2.49-13.66-8.31-17.67-12.22-8.25-28.69-.5-30.08 14.17a257.06 257.06 0 00-.39 41.62z"/></svg>
+
+                    </div>
+
+
+                    <label>
+                     Pasted paragraph will display here
+                    </label>
+
+
+                    <div class="preview-text" tabindex="0"></div>
+
+
+                    <div class="counter">
+
+                        <span>
+                            <span id="charCount">0</span> Characters
+                            &nbsp; | &nbsp;
+                            <span id="wordCount">0</span> Words
+                        </span>
+
+                        <span>
+                            Min. 10 characters
+                        </span>
+
+                    </div>
+
+
+                    <div class="button-row">
+
+                        <button onclick="pasteText()">
+                            📋 &nbsp; Paste Text
+                        </button>
+
+                        <button onclick="clearText()">
+                            🗑 &nbsp; Clear
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings">
+
+                    <div class="section-title">
+
+                        <div class="number">2</div>
+
+                        <h2>Practice Settings</h2>
+
+                    </div>
+
+
+                    <div class="settings-grid">
+
+
+                        <div>
+<!-- 
+                            <div class="setting-label">
+                                🌐 &nbsp; Select Language
+                            </div>
+
+                            <select>
+
+                                <option>English</option>
+
+                                <option>French</option>
+
+                                <option>German</option>
+
+                                <option>Spanish</option>
+
+                                <option>Hindi</option>
+
+                            </select>
+
+                        </div> -->
+
+
+                        <div>
+
+                            <div class="setting-label">
+                                ◷ &nbsp; Time Limit
+                            </div>
+
+                            <div class="time-options">
+
+                                <button id="one" onclick="work(30)">30s</button>
+
+                                <button id="two" onclick="work(60)" >60s</button>
+
+                                <button id="three" onclick="work(120)">120s</button>
+
+                                <button id="four" onclick="unlimited()">Unlimited</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- <div class="setting-label">
+                        〽 &nbsp; Difficulty (Optional)
+                    </div> -->
+
+<!-- 
+                    <div class="difficulty">
+
+                        <button>Easy</button>
+
+                        <button class="active">Medium</button>
+
+                        <button>Hard</button>
+
+                    </div> -->
+
+
+                    <button class="start-btn">
+                        🚀 &nbsp; Start Practice
+                        <br>
+
+                        <small>
+                            Start typing and improve your skills
+                        </small>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="right-side">
+
+
+                <section class="card preview">
+
+                    <div class="section-title">
+
+                        <span style="font-size: 22px;">
+                            ◉
+                        </span>
+
+                        <h2>Paste your para here</h2>
+
+                    </div>
+
+                    <!-- <p style="color: #c5c2d7;">
+                        This is how your text will appear during practice.
+                    </p> -->
+
+
+                       <textarea
+                        id="textInput"
+                        placeholder="Paste your paragraph here or type anything..."
+                    ></textarea>
+
+                </section>
+
+
+                <section class="card why">
+
+                    <h2>
+                        Why Custom Practice?
+                    </h2>
+
+
+                    <div class="feature">
+
+                        <div class="icon">
+                            🎯
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Practice with your own content
+                            </h3>
+
+                            <p>
+                                Use notes, articles, codes or any text you want.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="icon">
+                            📊
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Improve faster
+                            </h3>
+
+                            <p>
+                                Focus on the content that matters to you.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="icon">
+                            🧠
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Build real-world skills
+                            </h3>
+
+                            <p>
+                                Perfect for students, developers, writers and professionals.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+        <div class="boxes">
+            <div class="box one"><h3>Accuracy</h3> <h2>0</h2></div>
+              <div class="box two"><h3>Error</h3><h2>0</h2></div>
+
+                <div class="box three"><h3>WPM</h3><h2>0</h2></div>
+                  <div class="box four"><h3>Word typed</h3><h2>0</h2></div>
+        </div>
+
+
+        <div class="tips">
+
+           
+
+            <span>✓ &nbsp; Use texts you are familiar with</span>
+
+            <span>✓ &nbsp; Practice daily for better improvement</span>
+
+            <span>✓ &nbsp; Focus on accuracy, speed will follow</span>
+
+        </div>
+
+    </main>
+
+
+    <script>
+        let start=document.querySelector(".start-btn");
+
+        const textInput = document.getElementById("textInput");
+
+        const charCount = document.getElementById("charCount");
+
+        const wordCount = document.getElementById("wordCount");
+        let preview=document.querySelector(".preview-text");
+        let one=document.querySelector(".one h2");
+       let two=document.querySelector(".two h2");
+       let three=document.querySelector(".three h2");
+       let four=document.querySelector(".four h2");
+       let btnone=document.querySelector("#one");
+          let btntwo=document.querySelector("#two");
+             let btnthree=document.querySelector("#three");
+                let btnfour=document.querySelector("#four");
+ 
+       
+            let currentindex=0;
+          let accuracy=0;
+          let words=0;
+      
+       start.addEventListener("click",()=>{
+        preview.focus();
+        one.textContent="";
+        two.textContent="";
+        three.textContent="";
+        four.textContent="";
+                      if (
+    btnone.classList.contains("active") ||
+    btntwo.classList.contains("active") ||
+    btnthree.classList.contains("active") ||
+    btnfour.classList.contains("active")
+) {
+   
+}
+else{
+     alert("Please select a time.");
+}
+
+       })
+
+
+       
+
+
+        textInput.addEventListener("input", function () {
+            currentindex=0;
+            accuracy=0;
+            
+            preview.innerHTML="";
+
+            const text = textInput.value;
+
+            charCount.textContent = text.length;
+            
+             text.split("").forEach(text=>{
+                let span=document.createElement("span");
+                span.textContent=text;
+                preview.append(span);
+            })
+
+
+            const words = text.trim() === ""
+                ? 0
+                : text.trim().split(/\s+/).length;
+
+            wordCount.textContent = words;
+
+        });
+     
+        
+        let timedone="false";
+        let samay=0;
+       
+        let timestart="false";
+        let accu;
+        let wpm;
+        let timer;
+        let times;
+         function work(time){
+            currentindex=0;
+            timedone=false;
+        samay=0;
+        accu=0;
+        wpm=0;
+        accuracy=0;
+      
+             timer=setInterval(()=>{
+                samay++;
+                console.log(samay);
+                if(samay==time){
+                    clearInterval(timer);
+                    timedone="true";
+                     wpm=Math.floor((words+1/samay)*60)
+
+                        one.textContent=`${accu}%`;
+                two.textContent=accuracy;
+                four.textContent=words;
+                three.textContent=wpm;
+                     alert("Your time have been expired");
+                }
+               
+                
+            },1000)
+              preview.addEventListener("keydown",(e)=>{
+            if(timestart=="false"){
+                tim();
+                timestart="true";
+             }
+                accu=Math.floor(((Number(charCount.textContent)-accuracy)/Number (charCount.textContent))*100);
+                wpm=Math.floor(((words+1)/samaynow)*60);
+            if(timedone=="true"){
+          
+                one.textContent=`${accu}%`;
+                two.textContent=accuracy;
+                four.textContent=words+1;
+                three.textContent=wpm;
+                
+
+                return;
+
+            }
+            if(e.key==="Enter"||e.key==="Shift"||e.key==="Alt"||e.key==="CapsLock"){
+                return;
+            }
+            if(e.code==="Space"){
+                e.preventDefault();
+            }
+      let span=preview.querySelectorAll("span");
+             
+                  
+
+       
+            if(e.key===textInput.value[currentindex]){
+                
+                span[currentindex].classList.remove("wrong");
+              
+                span[currentindex].classList.add("correct");
+                 if(span[currentindex].textContent===" "){
+                words++;
+            }
+                
+                  currentindex++;
+                   if (currentindex >= textInput.value.length){
+                console.log("gret");
+                clearInterval(times);
+                clearInterval(timer);
+                  two.textContent=accuracy;
+                  three.textContent=wpm;
+                   four.textContent=wordCount.textContent;
+                   console.log(four.textContent);
+                   
+               
+                  
+                
+                
+                one.textContent=`${accu}%`;
+                return;
+            }
+                
+                  
+
+
+            }
+ 
+         
+            else{
+                if(!span[currentindex]){
+                    return;
+                }
+                else{
+
+             
+                
+                span[currentindex].classList.add("wrong");
+                accuracy++;
+                }
+                
+                
+              
+            }
+              
+        })
+          
+        }
+        let samaynow=0;
+        function tim(){
+            samaynow=0;
+                 times=setInterval(()=>{
+                samaynow++;
+                console.log(samaynow);
+                   if (currentindex >= textInput.value.length){
+              
+                 
+                   clearInterval(times);
+                  
+                
+                
+              
+            }
+               
+               
+                
+            },1000)
+        }
+        
+
+    
+    //     preview.addEventListener("keydown",(e)=>{
+    //         if(timestart=="false"){
+    //             tim();
+    //             timestart="true";
+    //          }
+    //             accu=Math.floor(((Number(charCount.textContent)-accuracy)/Number (charCount.textContent))*100);
+    //             wpm=Math.floor((words/samaynow)*60)
+    //         if(timedone=="true"){
+          
+    //             one.textContent=`${accu}%`;
+    //             two.textContent=accuracy;
+    //             four.textContent=words;
+    //             three.textContent=wpm;
+                
+
+    //             return;
+
+    //         }
+    //         if(e.key==="Enter"||e.key==="Shift"||e.key==="Alt"||e.key==="CapsLock"){
+    //             return;
+    //         }
+    //         if(e.code==="Space"){
+    //             e.preventDefault();
+    //         }
+    //   let span=preview.querySelectorAll("span");
+             
+                  
+
+       
+    //         if(e.key===textInput.value[currentindex]){
+                
+    //             span[currentindex].classList.remove("wrong");
+              
+    //             span[currentindex].classList.add("correct");
+    //              if(span[currentindex].textContent===" "){
+    //             words++;
+    //         }
+                
+    //               currentindex++;
+    //                if (currentindex >= textInput.value.length){
+    //             console.log("gret");
+    //             clearInterval(times);
+    //             clearInterval(timer);
+    //               two.textContent=accuracy;
+    //               three.textContent=wpm;
+    //                four.textContent=wordCount.textContent;
+    //                console.log(four.textContent);
+                   
+               
+                  
+                
+                
+    //             one.textContent=`${accu}%`;
+    //             return;
+    //         }
+                
+                  
+
+
+    //         }
+         
+    //         else{
+    //             span[currentindex].classList.add("wrong");
+    //             accuracy++;
+                
+              
+    //         }
+              
+    //     })
+
+
+        function clearText() {
+
+            textInput.value = "";
+
+            charCount.textContent = "0";
+
+            wordCount.textContent = "0";
+
+        }
+
+
+        async function pasteText() {
+
+            try {
+
+                const text = await navigator.clipboard.readText();
+
+                textInput.value = text;
+
+                textInput.dispatchEvent(new Event("input"));
+
+            } catch (error) {
+
+                alert("Please allow clipboard permission.");
+
+            }
+
+        }
+       
+                  function unlimited(){
+                     let finished=false;
+                     preview.addEventListener("keydown",(e)=>{
+                        if(finished){
+                            return;
+                        }
+            if(timestart=="false"){
+                tim();
+                timestart="true";
+             }
+                accu=Math.floor(((Number(charCount.textContent)-accuracy)/Number (charCount.textContent))*100);
+                wpm=Math.floor(((words+1)/samaynow)*60);
+            if(timedone=="true"){
+          
+                one.textContent=`${accu}%`;
+                two.textContent=accuracy;
+                four.textContent=words+1;
+                three.textContent=wpm;
+                finshed=true;
+                
+
+                return;
+
+            }
+            if(e.key==="Enter"||e.key==="Shift"||e.key==="Alt"||e.key==="CapsLock"){
+                return;
+            }
+            if(e.code==="Space"){
+                e.preventDefault();
+            }
+      let span=preview.querySelectorAll("span");
+             
+                  
+
+       
+            if(e.key===textInput.value[currentindex]){
+                
+                span[currentindex].classList.remove("wrong");
+              
+                span[currentindex].classList.add("correct");
+                 if(span[currentindex].textContent===" "){
+                words++;
+            }
+                
+                  currentindex++;
+                   if (currentindex >= textInput.value.length){
+                console.log("gret");
+                clearInterval(times);
+                clearInterval(timer);
+                  two.textContent=accuracy;
+                  three.textContent=wpm;
+                   four.textContent=wordCount.textContent;
+                   console.log(four.textContent);
+                   
+               
+                  
+                
+                
+                one.textContent=`${accu}%`;
+                return;
+            }
+                
+                  
+
+
+            }
+      
+            else{
+                if(!span[currentindex]){
+                    return;
+                }
+                else{
+                span[currentindex].classList.add("wrong");
+                accuracy++;
+                }
+                
+              
+            }
+              
+        })
+          
+        }
+            function restart() {
+    //             finished=false;
+    //             preview.innerHTML="";
+    //             textInput.value="";
+    //             btnone.classList.remove("active");
+    //              btntwo.classList.remove("active");
+    //               btnthree.classList.remove("active");
+    //                btnfour.classList.remove("active");
+    // currentindex = 0;
+    // accuracy = 0;
+    // words = 0;
+    // samay = 0;
+    // samaynow = 0;
+    // timedone = "false";
+    // timestart = "false";
+    //   one.textContent="";
+    //     two.textContent="";
+    //     three.textContent="";
+    //     four.textContent="";
+
+    // clearInterval(timer);
+    // clearInterval(times);
+    location.reload();
+
+    // Clear UI and reset classes...
+}
+
+
+        document.querySelectorAll(
+            ".time-options button, .difficulty button"
+        ).forEach(button => {
+
+            button.addEventListener("click", function () {
+
+                const parent = this.parentElement;
+
+                parent
+                    .querySelectorAll("button")
+                    .forEach(btn => btn.classList.remove("active"));
+
+                this.classList.add("active");
+
+            });
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
