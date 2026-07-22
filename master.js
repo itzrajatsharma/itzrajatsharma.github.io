@@ -402,12 +402,12 @@ para.addEventListener("touchstart",()=>{
 
 // })
 // })
-master.addEventListener("click",()=>{
+function  mast(){
     light.style.display="block";
     lightonn.style.display="none";
      container.style.backgroundImage='url("master.WebP")';
      compint=0;
-      comp.style.display="none";
+    //   comp.style.display="none";
     right.style.display="";
     para.style.backgroundColor="transparent";
       para.style.backgroundColor = "rgba(0,0,0,0.7)";
@@ -458,7 +458,7 @@ currentindex = 0;      // reset typing position
     light.style.display="block";
         left.style.display="";
          container.style.backgroundImage='url("master.WebP")';
-              comp.style.display="none";
+            //   comp.style.display="none";
     right.style.display="";
       para.style.backgroundColor="transparent";
       para.style.backgroundColor = "rgba(0,0,0,0.7)";
@@ -474,7 +474,8 @@ right.style.backgroundRepeat = "no-repeat";
 
 })
 
-})
+};
+mast();
 function codedisplay() {
 
     count = 0;

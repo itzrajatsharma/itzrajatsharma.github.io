@@ -229,179 +229,251 @@ para.addEventListener("touchstart",()=>{
 // });
                
     
+
+   
 }
-   
-
-
-
-
-
-
-
-
-
-
-// easy.addEventListener("click",()=>{
+easy.addEventListener("click",()=>{
   
-//     light.style.display="block";
-//     lightonn.style.display="none";
-//     compint=0;
-//       container.style.backgroundImage='url("easy.WebP")';
-//        comp.style.display="none";
-//     right.style.display="";
-//       para.style.backgroundColor="transparent";
-//       para.style.backgroundColor = "rgba(0,0,0,0.7)";
+    light.style.display="block";
+    lightonn.style.display="none";
+    compint=0;
+      container.style.backgroundImage='url("easy.WebP")';
+       comp.style.display="none";
+    right.style.display="";
+      para.style.backgroundColor="transparent";
+      para.style.backgroundColor = "rgba(0,0,0,0.7)";
       
-//       right.style.backgroundSize = "cover";
-// right.style.backgroundPosition = "center";
-// right.style.backgroundRepeat = "no-repeat";
-//       left.style.backgroundColor="transparent";
+      right.style.backgroundSize = "cover";
+right.style.backgroundPosition = "center";
+right.style.backgroundRepeat = "no-repeat";
+      left.style.backgroundColor="transparent";
     
-//      right.style.border="none";
-//     left.style.border="none";
-//     timebar.style.backgroundColor="transparent";
-//     box.forEach(box=>{
-//          box.style.backgroundColor="transparent";
+     right.style.border="none";
+    left.style.border="none";
+    timebar.style.backgroundColor="transparent";
+    box.forEach(box=>{
+         box.style.backgroundColor="transparent";
 
-//     })
+    })
    
-//      box.forEach(box=>{
-//          box.style.borderColor="grey";
-//          box.style.display="none";
+     box.forEach(box=>{
+         box.style.borderColor="grey";
+         box.style.display="none";
 
-//     })
-//     c=0;
-//     console.log("hello");
-//      pargraph = [
-//   "The quick brown fox jumps over the lazy dog.",
-//   "Practice typing every day to improve your speed.",
-//   "A good keyboard can make typing more comfortable.",
-//   "Learning to type is an important digital skill.",
-//   "Small improvements lead to big results over time.",
-//   "Accuracy is more important than speed at first.",
-//   "Keep your hands relaxed while typing.",
-//   "Regular practice builds muscle memory.",
-//   "Focus on each word and avoid rushing.",
-//   "Typing games can make practice more enjoyable."
-// ];
-// currentindex = 0;      // reset typing position
-//     accuracycount = 0;     // reset errors
-//     time = 0;              // reset timer
-//     timestart = false;
-//     clearInterval(timer);
-// display();
-// lightonn.addEventListener("click",()=>{
-//     lightonn.style.display="none";
-//     light.style.display="block";
-//         left.style.display="";
-//          container.style.backgroundImage='url("easy.WebP")';
-//               comp.style.display="none";
-//     right.style.display="";
-//       para.style.backgroundColor="transparent";
-//       para.style.backgroundColor = "rgba(0,0,0,0.7)";
+    })
+    c=0;
+    console.log("hello");
+     pargraph = [
+  "The quick brown fox jumps over the lazy dog.",
+  "Practice typing every day to improve your speed.",
+  "A good keyboard can make typing more comfortable.",
+  "Learning to type is an important digital skill.",
+  "Small improvements lead to big results over time.",
+  "Accuracy is more important than speed at first.",
+  "Keep your hands relaxed while typing.",
+  "Regular practice builds muscle memory.",
+  "Focus on each word and avoid rushing.",
+  "Typing games can make practice more enjoyable."
+];
+currentindex = 0;      // reset typing position
+    accuracycount = 0;     // reset errors
+    time = 0;              // reset timer
+    timestart = false;
+    clearInterval(timer);
+display();
+lightonn.addEventListener("click",()=>{
+    lightonn.style.display="none";
+    light.style.display="block";
+        left.style.display="";
+         container.style.backgroundImage='url("easy.WebP")';
+              comp.style.display="none";
+    right.style.display="";
+      para.style.backgroundColor="transparent";
+      para.style.backgroundColor = "rgba(0,0,0,0.7)";
       
-//       right.style.backgroundSize = "cover";
-// right.style.backgroundPosition = "center";
-// right.style.backgroundRepeat = "no-repeat";
-//       left.style.backgroundColor="transparent";
+      right.style.backgroundSize = "cover";
+right.style.backgroundPosition = "center";
+right.style.backgroundRepeat = "no-repeat";
+      left.style.backgroundColor="transparent";
     
-//      right.style.border="none";
-//     left.style.border="none";
-//     timebar.style.backgroundColor="transparent";
+     right.style.border="none";
+    left.style.border="none";
+    timebar.style.backgroundColor="transparent";
 
-// })
+})
 
 
-// });
-// intermediate.addEventListener("click",()=>{
-//     light.style.display="block";
-//     lightonn.style.display="none";
-//       container.style.backgroundImage='url("ine.WebP")';
-//        comp.style.display="none";
-//     right.style.display="";
-//     compint=0;
-//        para.style.backgroundColor="transparent";
-//       para.style.backgroundColor = "rgba(0,0,0,0.7)";
-//         left.style.backgroundColor="transparent";
-//         timebar.style.backgroundColor="transparent";
-//      right.style.border="none";
-//     left.style.border="none";
-//      box.forEach(box=>{
-//          box.style.borderColor="grey";
-//          box.style.backgroundColor="transparent";
-//          box.style.display="none";
+});
 
-//     })
-//     c=0;
-//     pargraph  = [
-//   "Learning to type efficiently requires consistent practice and patience. Many beginners focus entirely on speed, but experienced typists understand that accuracy is equally important. Developing proper finger placement and maintaining good posture can significantly improve both comfort and performance during long typing sessions. Over time, repeated practice builds muscle memory and allows users to type naturally without looking at the keyboard.",
 
-//   "Technology has transformed the way people communicate, learn, and conduct business. Computers, smartphones, and internet services have become essential tools in everyday life. As digital communication continues to expand, strong typing skills provide a significant advantage for students, professionals, and anyone who regularly works with technology.",
 
-//   "Building strong typing habits requires dedication and a willingness to practice regularly. Many learners become discouraged when they fail to see immediate improvements, but consistent effort often produces remarkable progress over time. Practicing for even twenty minutes each day can substantially increase typing speed and accuracy.",
 
-//   "The internet has revolutionized access to information and education. Students can now access online courses, research materials, and educational videos from virtually anywhere in the world. This accessibility has created new opportunities for learning and professional development across multiple disciplines.",
 
-//   "Developing keyboard proficiency involves more than memorizing key positions. Successful typists learn to coordinate finger movements efficiently while maintaining concentration and minimizing unnecessary hand movements. This combination of skill and practice allows individuals to achieve impressive typing speeds.",
 
-//   "Modern workplaces depend heavily on digital communication and documentation. Employees frequently spend several hours each day writing emails, preparing reports, analyzing data, and collaborating through online platforms. Efficient typing skills can significantly improve workplace productivity.",
 
-//   "Maintaining proper posture while typing is essential for preventing discomfort and repetitive strain injuries. Keeping the back straight, shoulders relaxed, and wrists in a neutral position helps reduce physical stress and allows for longer, more comfortable practice sessions.",
 
-//   "The development of computer technology has dramatically changed how businesses operate. Organizations now rely on digital systems for communication, accounting, project management, customer service, and data analysis. Employees with strong technical and typing skills often adapt more easily to these environments.",
-
-//   "Regular practice sessions are generally more effective than occasional lengthy sessions. Short periods of focused practice help reinforce muscle memory and improve concentration while reducing fatigue and frustration during the learning process.",
-
-//   "Students who develop strong typing skills often complete assignments more efficiently and experience greater confidence when working with computers. These skills become increasingly valuable as academic and professional environments continue to adopt digital technologies.",
-
-//   "The process of learning touch typing involves training the fingers to locate keys automatically without visual assistance. Although this approach initially feels difficult, consistent practice eventually allows typists to maintain both speed and accuracy simultaneously.",
-
-//   "Communication technologies have evolved rapidly over the past several decades. Electronic mail, instant messaging, video conferencing, and social media platforms have fundamentally transformed the way individuals interact and exchange information.",
-
-//   "Improving typing speed requires balancing multiple factors, including accuracy, concentration, finger coordination, and familiarity with the keyboard layout. Neglecting any one of these areas can limit overall performance and slow progress.",
-
-//   "Software applications continue to play an increasingly important role in education, healthcare, finance, and entertainment. Professionals across these industries rely heavily on computers and benefit greatly from efficient keyboard skills.",
-
-//   "Typing exercises that include punctuation, numbers, and special symbols help learners develop a broader range of keyboard skills. These exercises also prepare individuals for real-world typing tasks encountered in academic and professional settings.",
-
-//   "The ability to type accurately under time pressure is an important skill for many careers. Journalists, programmers, researchers, and administrative professionals frequently rely on fast and precise typing to complete their responsibilities effectively.",
-
-//   "Consistent practice not only improves typing speed but also increases confidence and reduces mental effort. Experienced typists often focus entirely on their thoughts rather than on the physical act of pressing keys.",
-
-//   "Digital literacy has become an essential component of modern education. Students are increasingly expected to use computers for research, communication, collaboration, and the completion of academic assignments.",
-
-//   "Many successful learners establish structured practice routines that include warm-up exercises, accuracy drills, and timed typing tests. This systematic approach helps track progress and maintain motivation over extended periods.",
-
-//   "The continued advancement of technology ensures that keyboard skills will remain valuable for many years. Regardless of future innovations, the ability to communicate efficiently through digital devices is likely to remain an important professional and personal asset."
-// ];
-// currentindex = 0;      // reset typing position
-//     accuracycount = 0;     // reset errors
-//     time = 0;              // reset timer
-//     timestart = false;
-//     clearInterval(timer);
-
-// display();
-// lightonn.addEventListener("click",()=>{
-//     lightonn.style.display="none";
-//     light.style.display="block";
-//         left.style.display="";
-//          container.style.backgroundImage='url("ine.WebP")';
-//               comp.style.display="none";
-//     right.style.display="";
-//       para.style.backgroundColor="transparent";
-//       para.style.backgroundColor = "rgba(0,0,0,0.7)";
+function eas(){
+  
+    light.style.display="block";
+    lightonn.style.display="none";
+    compint=0;
+      container.style.backgroundImage='url("easy.WebP")';
+    //    comp.style.display="none";
+    right.style.display="";
+      para.style.backgroundColor="transparent";
+      para.style.backgroundColor = "rgba(0,0,0,0.7)";
       
-//       right.style.backgroundSize = "cover";
-// right.style.backgroundPosition = "center";
-// right.style.backgroundRepeat = "no-repeat";
-//       left.style.backgroundColor="transparent";
+      right.style.backgroundSize = "cover";
+right.style.backgroundPosition = "center";
+right.style.backgroundRepeat = "no-repeat";
+      left.style.backgroundColor="transparent";
     
-//      right.style.border="none";
-//     left.style.border="none";
-//     timebar.style.backgroundColor="transparent";
+     right.style.border="none";
+    left.style.border="none";
+    timebar.style.backgroundColor="transparent";
+    box.forEach(box=>{
+         box.style.backgroundColor="transparent";
 
-// })
-// })
+    })
+   
+     box.forEach(box=>{
+         box.style.borderColor="grey";
+         box.style.display="none";
+
+    })
+    c=0;
+    console.log("hello");
+     pargraph = [
+  "The quick brown fox jumps over the lazy dog.",
+  "Practice typing every day to improve your speed.",
+  "A good keyboard can make typing more comfortable.",
+  "Learning to type is an important digital skill.",
+  "Small improvements lead to big results over time.",
+  "Accuracy is more important than speed at first.",
+  "Keep your hands relaxed while typing.",
+  "Regular practice builds muscle memory.",
+  "Focus on each word and avoid rushing.",
+  "Typing games can make practice more enjoyable."
+];
+currentindex = 0;      // reset typing position
+    accuracycount = 0;     // reset errors
+    time = 0;              // reset timer
+    timestart = false;
+    clearInterval(timer);
+display();
+lightonn.addEventListener("click",()=>{
+    lightonn.style.display="none";
+    light.style.display="block";
+        left.style.display="";
+         container.style.backgroundImage='url("easy.WebP")';
+            //   comp.style.display="none";
+    right.style.display="";
+      para.style.backgroundColor="transparent";
+      para.style.backgroundColor = "rgba(0,0,0,0.7)";
+      
+      right.style.backgroundSize = "cover";
+right.style.backgroundPosition = "center";
+right.style.backgroundRepeat = "no-repeat";
+      left.style.backgroundColor="transparent";
+    
+     right.style.border="none";
+    left.style.border="none";
+    timebar.style.backgroundColor="transparent";
+
+})
+
+
+};
+eas();
+intermediate.addEventListener("click",()=>{
+    light.style.display="block";
+    lightonn.style.display="none";
+      container.style.backgroundImage='url("ine.WebP")';
+       comp.style.display="none";
+    right.style.display="";
+    compint=0;
+       para.style.backgroundColor="transparent";
+      para.style.backgroundColor = "rgba(0,0,0,0.7)";
+        left.style.backgroundColor="transparent";
+        timebar.style.backgroundColor="transparent";
+     right.style.border="none";
+    left.style.border="none";
+     box.forEach(box=>{
+         box.style.borderColor="grey";
+         box.style.backgroundColor="transparent";
+         box.style.display="none";
+
+    })
+    c=0;
+    pargraph  = [
+  "Learning to type efficiently requires consistent practice and patience. Many beginners focus entirely on speed, but experienced typists understand that accuracy is equally important. Developing proper finger placement and maintaining good posture can significantly improve both comfort and performance during long typing sessions. Over time, repeated practice builds muscle memory and allows users to type naturally without looking at the keyboard.",
+
+  "Technology has transformed the way people communicate, learn, and conduct business. Computers, smartphones, and internet services have become essential tools in everyday life. As digital communication continues to expand, strong typing skills provide a significant advantage for students, professionals, and anyone who regularly works with technology.",
+
+  "Building strong typing habits requires dedication and a willingness to practice regularly. Many learners become discouraged when they fail to see immediate improvements, but consistent effort often produces remarkable progress over time. Practicing for even twenty minutes each day can substantially increase typing speed and accuracy.",
+
+  "The internet has revolutionized access to information and education. Students can now access online courses, research materials, and educational videos from virtually anywhere in the world. This accessibility has created new opportunities for learning and professional development across multiple disciplines.",
+
+  "Developing keyboard proficiency involves more than memorizing key positions. Successful typists learn to coordinate finger movements efficiently while maintaining concentration and minimizing unnecessary hand movements. This combination of skill and practice allows individuals to achieve impressive typing speeds.",
+
+  "Modern workplaces depend heavily on digital communication and documentation. Employees frequently spend several hours each day writing emails, preparing reports, analyzing data, and collaborating through online platforms. Efficient typing skills can significantly improve workplace productivity.",
+
+  "Maintaining proper posture while typing is essential for preventing discomfort and repetitive strain injuries. Keeping the back straight, shoulders relaxed, and wrists in a neutral position helps reduce physical stress and allows for longer, more comfortable practice sessions.",
+
+  "The development of computer technology has dramatically changed how businesses operate. Organizations now rely on digital systems for communication, accounting, project management, customer service, and data analysis. Employees with strong technical and typing skills often adapt more easily to these environments.",
+
+  "Regular practice sessions are generally more effective than occasional lengthy sessions. Short periods of focused practice help reinforce muscle memory and improve concentration while reducing fatigue and frustration during the learning process.",
+
+  "Students who develop strong typing skills often complete assignments more efficiently and experience greater confidence when working with computers. These skills become increasingly valuable as academic and professional environments continue to adopt digital technologies.",
+
+  "The process of learning touch typing involves training the fingers to locate keys automatically without visual assistance. Although this approach initially feels difficult, consistent practice eventually allows typists to maintain both speed and accuracy simultaneously.",
+
+  "Communication technologies have evolved rapidly over the past several decades. Electronic mail, instant messaging, video conferencing, and social media platforms have fundamentally transformed the way individuals interact and exchange information.",
+
+  "Improving typing speed requires balancing multiple factors, including accuracy, concentration, finger coordination, and familiarity with the keyboard layout. Neglecting any one of these areas can limit overall performance and slow progress.",
+
+  "Software applications continue to play an increasingly important role in education, healthcare, finance, and entertainment. Professionals across these industries rely heavily on computers and benefit greatly from efficient keyboard skills.",
+
+  "Typing exercises that include punctuation, numbers, and special symbols help learners develop a broader range of keyboard skills. These exercises also prepare individuals for real-world typing tasks encountered in academic and professional settings.",
+
+  "The ability to type accurately under time pressure is an important skill for many careers. Journalists, programmers, researchers, and administrative professionals frequently rely on fast and precise typing to complete their responsibilities effectively.",
+
+  "Consistent practice not only improves typing speed but also increases confidence and reduces mental effort. Experienced typists often focus entirely on their thoughts rather than on the physical act of pressing keys.",
+
+  "Digital literacy has become an essential component of modern education. Students are increasingly expected to use computers for research, communication, collaboration, and the completion of academic assignments.",
+
+  "Many successful learners establish structured practice routines that include warm-up exercises, accuracy drills, and timed typing tests. This systematic approach helps track progress and maintain motivation over extended periods.",
+
+  "The continued advancement of technology ensures that keyboard skills will remain valuable for many years. Regardless of future innovations, the ability to communicate efficiently through digital devices is likely to remain an important professional and personal asset."
+];
+currentindex = 0;      // reset typing position
+    accuracycount = 0;     // reset errors
+    time = 0;              // reset timer
+    timestart = false;
+    clearInterval(timer);
+
+display();
+lightonn.addEventListener("click",()=>{
+    lightonn.style.display="none";
+    light.style.display="block";
+        left.style.display="";
+         container.style.backgroundImage='url("ine.WebP")';
+              comp.style.display="none";
+    right.style.display="";
+      para.style.backgroundColor="transparent";
+      para.style.backgroundColor = "rgba(0,0,0,0.7)";
+      
+      right.style.backgroundSize = "cover";
+right.style.backgroundPosition = "center";
+right.style.backgroundRepeat = "no-repeat";
+      left.style.backgroundColor="transparent";
+    
+     right.style.border="none";
+    left.style.border="none";
+    timebar.style.backgroundColor="transparent";
+
+})
+})
 master.addEventListener("click",()=>{
     light.style.display="block";
     lightonn.style.display="none";

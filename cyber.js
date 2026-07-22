@@ -1354,11 +1354,11 @@ span.forEach(span=>{
 
 let body=document.querySelector("body");
 
-cyber.addEventListener("click",()=>{
+function cyb(){
     light.style.display="none";
     lightonn.style.display="none";
     timebar.style.backgroundColor="transparent";
-    comp.style.display="none";
+    // comp.style.display="none";
     right.style.display="";
     para.style.borderColor="grey"
     container.style.backgroundImage = 'url("backgroundtypeweb.png")';
@@ -1410,7 +1410,8 @@ span.forEach(span=>{
 
 
 
-})
+};
+cyb();
 let comp=document.querySelector(".comp");
 comptyping.addEventListener("click",()=>{
    
@@ -1448,6 +1449,7 @@ left.style.border="";
     typingcomp();
 
 })
+
 let paracomp=document.querySelector(".paracomp");
 function displaycomp() {
     r=0;

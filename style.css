@@ -48,6 +48,7 @@ body{
     height: 9rem;
     border-radius: 60px;
     max-width: 80%;
+    padding: 0;
     
     
 }
@@ -87,7 +88,7 @@ body{
 
 }
 .left ul li:hover{
-    background-color: #5121c7;
+    /* background-color: #7f4ff7; */
     /* border: 1px solid white; */
     transform: scale(1.1);
 }
@@ -764,7 +765,7 @@ border-radius:6px ;
 
 }
 .right .sections{
-    width:30%;
+    width:50%;
 }
 
 .right .sections ul{

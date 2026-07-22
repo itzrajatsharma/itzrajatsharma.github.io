@@ -583,10 +583,10 @@ function codedisplay() {
 //       r=1;
 
 // }
-code.addEventListener("click",()=>{
+function cod(){
     light.style.display="block";
     lightonn.style.display="none"
-    comp.style.display="none";
+    // comp.style.display="none";
     right.style.display="";
     compint=0;
 
@@ -783,7 +783,8 @@ right.style.backgroundRepeat = "no-repeat";
 
 
 
-})
+};
+cod();
 
  
 

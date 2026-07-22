@@ -1412,7 +1412,7 @@ span.forEach(span=>{
 
 })
 let comp=document.querySelector(".comp");
-comptyping.addEventListener("click",()=>{
+function comp(){
    
     c=0;
     //  let clockdisplay = document.querySelector(".clockdisplay").innerHTML = time + "sec";
@@ -1447,7 +1447,8 @@ left.style.border="";
     wpmboxcomp.style.display="none";
     typingcomp();
 
-})
+}
+comp();
 let paracomp=document.querySelector(".paracomp");
 function displaycomp() {
     r=0;

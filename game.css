@@ -26,7 +26,9 @@ body{
 }
 .heading h1{
      font-family: 'Orbitron', sans-serif;
-     color: rgb(23, 232, 23);
+      background: linear-gradient(90deg, #b05cff, #8754ff, #c77bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
      
 
 }
